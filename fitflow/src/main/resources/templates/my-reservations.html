@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Moje Rezerwacje - FitFlow</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div th:replace="~{fragments :: navbar}"></div>
+
+<div class="container mt-4">
+    <h2>Moje Rezerwacje</h2>
+    <p>Witaj, <span th:text="${member.firstName}"></span>! Oto lista Twoich nadchodzących rezerwacji.</p>
+
+    <div th:if="${reservations.isEmpty()}" class="alert alert-info" role="alert">
+        Nie masz jeszcze żadnych rezerwacji. Sprawdź nasz <a th:href="@{/class-schedule}" class="alert-link">grafik zajęć</a>!
+    </div>
+
+    <table class="table table-striped" th:if="${!reservations.isEmpty()}">
+        <thead>
+        <tr>
+            <th scope="col">Nazwa Zajęć</th>
+            <th scope="col">Data i Godzina</th>
+            <th scope="col">Trener</th>
+            <th scope="col">Sala</th>
+            <th scope="col">Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="reservation : ${reservations}">
+            <td th:text="${reservation.fitnessClass.name}">Joga</td>
+            <td th:text="${#temporals.format(reservation.fitnessClass.dateTime, 'dd.MM.yyyy HH:mm')}">01.01.2025 10:00</td>
+            <td th:text="${reservation.fitnessClass.trainer.firstName} + ' ' + ${reservation.fitnessClass.trainer.lastName}">Anna Nowak</td>
+            <td th:text="${reservation.fitnessClass.trainingHall.name}">Sala A</td>
+            <td><span class="badge bg-success" th:text="${reservation.status}">Potwierdzona</span></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
