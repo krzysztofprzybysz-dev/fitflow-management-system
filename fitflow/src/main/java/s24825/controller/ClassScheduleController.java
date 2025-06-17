@@ -1,5 +1,6 @@
 package s24825.controller;
 
+import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,8 +19,6 @@ import java.util.List;
 @Controller
 public class ClassScheduleController {
 
-    public static final long HARDCODED_MEMBER_ID = 1L;
-
     private final FitnessClassRepository fitnessClassRepository;
     private final ReservationService reservationService;
 
@@ -30,28 +29,39 @@ public class ClassScheduleController {
 
 
     @GetMapping({"/", "/class-schedule"})
-    public String showClassSchedule(Model model) {
+    public String showClassSchedule(Model model, HttpSession session) {
+
+        Long memberId = (Long) session.getAttribute("loggedInMemberId");
+
+        if (memberId == null) {
+            return "redirect:/login";
+        }
 
         List<FitnessClass> classes = fitnessClassRepository.findAll();
 
         model.addAttribute("classes", classes);
-        model.addAttribute("memberId", HARDCODED_MEMBER_ID);
 
         return "class-schedule";
     }
 
     @PostMapping("/reservations")
     public String makeReservation(@RequestParam("classId") Long classId,
-                                  @RequestParam("memberId") Long memberId,
+                                  HttpSession session,
                                   RedirectAttributes redirectAttributes) {
+
+        Long memberId = (Long) session.getAttribute("loggedInMemberId");
+
+        if (memberId == null) {
+            return "redirect:/login";
+        }
+
         try {
             reservationService.createReservation(memberId, classId);
             redirectAttributes.addFlashAttribute("successMessage", "Rezerwacja zakończona pomyślnie!");
-
         } catch (IllegalStateException e) {
             redirectAttributes.addFlashAttribute("errorMessage", "Błąd rezerwacji: " + e.getMessage());
         }
-
         return "redirect:/class-schedule";
     }
+
 }

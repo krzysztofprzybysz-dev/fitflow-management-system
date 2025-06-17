@@ -32,7 +32,7 @@
             <td th:text="${reservation.fitnessClass.name}">Joga</td>
             <td th:text="${#temporals.format(reservation.fitnessClass.dateTime, 'dd.MM.yyyy HH:mm')}">01.01.2025 10:00</td>
             <td th:text="${reservation.fitnessClass.trainer.firstName} + ' ' + ${reservation.fitnessClass.trainer.lastName}">Anna Nowak</td>
-            <td th:text="${reservation.fitnessClass.trainingHall.name}">Sala A</td>
+            <td th:text="${reservation.fitnessClass.trainingRoom.name}">Sala A</td>
             <td><span class="badge bg-success" th:text="${reservation.status}">Potwierdzona</span></td>
         </tr>
         </tbody>

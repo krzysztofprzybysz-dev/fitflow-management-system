@@ -11,7 +11,7 @@ import java.util.List;
 public interface FitnessClassRepository extends JpaRepository<FitnessClass, Long> {
 
     @Override
-    @EntityGraph(value = "FitnessClass.withReservations")
+    @EntityGraph(value = "FitnessClass.withDetails")
     List<FitnessClass> findAll();
 
 }

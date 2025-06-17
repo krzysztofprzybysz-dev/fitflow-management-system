@@ -11,7 +11,9 @@ import s24825.model.person.Trainer;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 
 @Entity
@@ -21,8 +23,12 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @NamedEntityGraph(
-        name = "FitnessClass.withReservations",
-        attributeNodes = @NamedAttributeNode("reservations")
+        name = "FitnessClass.withDetails",
+        attributeNodes = {
+                @NamedAttributeNode("reservations"),
+                @NamedAttributeNode("trainer"),
+                @NamedAttributeNode("trainingRoom")
+        }
 )
 public abstract class FitnessClass {
 
@@ -35,16 +41,16 @@ public abstract class FitnessClass {
     private LocalDateTime dateTime;
     private int durationInMinutes;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "trainer_id")
     private Trainer trainer;
 
-    @ManyToOne
-    @JoinColumn(name = "training_hall_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "training_room_id")
     private TrainingRoom trainingRoom;
 
-    @OneToMany(mappedBy = "fitnessClass")
-    private List<Reservation> reservations = new ArrayList<>();
+    @OneToMany(mappedBy = "fitnessClass", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<Reservation> reservations = new HashSet<>();
 
     public abstract int getCapacity();
 

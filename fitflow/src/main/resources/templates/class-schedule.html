@@ -30,7 +30,7 @@
             <div class="d-flex justify-content-between align-items-center">
                 <div>
                     <small th:text="'Trener: ' + ${class.trainer.firstName} + ' ' + ${class.trainer.lastName}">Imię trenera</small><br>
-                    <small th:text="'Sala: ' + ${class.trainingHall.name}">Sala</small>
+                    <small th:text="'Sala: ' + ${class.trainingRoom.name}">Sala</small>
                 </div>
                 <div>
                     <span th:text="'Wolne miejsca: ' + (${class.capacity} - ${class.numberOfReservations})" class="badge bg-primary rounded-pill me-3"></span>

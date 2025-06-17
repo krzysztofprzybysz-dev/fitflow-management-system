@@ -19,7 +19,9 @@ public class ReservationService {
     private final FitnessClassRepository fitnessClassRepository;
     private final ReservationRepository reservationRepository;
 
-    public ReservationService(MemberRepository memberRepository, FitnessClassRepository fitnessClassRepository, ReservationRepository reservationRepository) {
+    public ReservationService(MemberRepository memberRepository,
+                              FitnessClassRepository fitnessClassRepository,
+                              ReservationRepository reservationRepository) {
         this.memberRepository = memberRepository;
         this.fitnessClassRepository = fitnessClassRepository;
         this.reservationRepository = reservationRepository;
@@ -29,7 +31,7 @@ public class ReservationService {
     @Transactional
     public void createReservation(Long memberId, Long fitnessClassId) {
 
-        Member member = memberRepository.findById(memberId)
+        Member member = memberRepository.findByIdWithMembershipsAndReservations(memberId)
                 .orElseThrow(() -> new IllegalStateException("Nie znaleziono członka o ID: " + memberId));
 
         FitnessClass fitnessClass = fitnessClassRepository.findById(fitnessClassId)
