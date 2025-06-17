@@ -2,9 +2,11 @@ package s24825.service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import s24825.exception.ReservationException;
+import s24825.exception.ResourceNotFoundException;
 import s24825.model.classes.FitnessClass;
-import s24825.model.person.Member;
 import s24825.model.membership.Membership;
+import s24825.model.person.Member;
 import s24825.model.reservation.Reservation;
 import s24825.repository.FitnessClassRepository;
 import s24825.repository.MemberRepository;
@@ -27,34 +29,26 @@ public class ReservationService {
         this.reservationRepository = reservationRepository;
     }
 
-
     @Transactional
     public void createReservation(Long memberId, Long fitnessClassId) {
 
-        Member member = memberRepository.findByIdWithMembershipsAndReservations(memberId)
-                .orElseThrow(() -> new IllegalStateException("Nie znaleziono członka o ID: " + memberId));
-
-        FitnessClass fitnessClass = fitnessClassRepository.findById(fitnessClassId)
-                .orElseThrow(() -> new IllegalStateException("Nie znaleziono zajęć o ID: " + fitnessClassId));
-
-        if (fitnessClass.getNumberOfReservations() >= fitnessClass.getCapacity()) {
-            throw new IllegalStateException("Brak wolnych miejsc na te zajęcia.");
+        if (reservationRepository.existsByMemberIdAndFitnessClassId(memberId, fitnessClassId)) {
+            throw new ReservationException("Już posiadasz rezerwację na te zajęcia.");
         }
 
+        Member member = memberRepository.findByIdWithMemberships(memberId)
+                .orElseThrow(() -> new ResourceNotFoundException("Nie znaleziono członka o ID: " + memberId));
 
         Optional<Membership> activePass = member.getMemberships().stream()
                 .filter(Membership::isActive)
                 .findFirst();
 
         if (activePass.isEmpty() || !activePass.get().canBook()) {
-            throw new IllegalStateException("Członek nie posiada aktywnego karnetu lub wyczerpał limit wejść.");
+            throw new ReservationException("Członek nie posiada aktywnego karnetu lub wyczerpał limit wejść.");
         }
 
-        boolean alreadyReserved = member.getReservations().stream()
-                .anyMatch(r -> r.getFitnessClass().getId().equals(fitnessClassId));
-        if (alreadyReserved) {
-            throw new IllegalStateException("Już posiadasz rezerwację na te zajęcia.");
-        }
+        FitnessClass fitnessClass = fitnessClassRepository.findById(fitnessClassId)
+                .orElseThrow(() -> new ResourceNotFoundException("Nie znaleziono zajęć o ID: " + fitnessClassId));
 
         Reservation reservation = new Reservation(member, fitnessClass);
         reservationRepository.save(reservation);

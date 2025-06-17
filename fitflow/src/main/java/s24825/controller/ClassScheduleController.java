@@ -7,40 +7,29 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import s24825.model.classes.FitnessClass;
-import s24825.repository.FitnessClassRepository;
+import s24825.service.FitnessClassService;
 import s24825.service.ReservationService;
+import s24825.service.SessionService;
 
-import java.util.List;
-
-/**
- * Controller for handling requests related to the class schedule and making reservations.
- */
 @Controller
 public class ClassScheduleController {
 
-    private final FitnessClassRepository fitnessClassRepository;
+    private final FitnessClassService fitnessClassService;
     private final ReservationService reservationService;
+    private final SessionService sessionService;
 
-    public ClassScheduleController(FitnessClassRepository fitnessClassRepository, ReservationService reservationService) {
-        this.fitnessClassRepository = fitnessClassRepository;
+    public ClassScheduleController(FitnessClassService fitnessClassService,
+                                   ReservationService reservationService,
+                                   SessionService sessionService) {
+
+        this.fitnessClassService = fitnessClassService;
         this.reservationService = reservationService;
+        this.sessionService = sessionService;
     }
 
-
     @GetMapping({"/", "/class-schedule"})
-    public String showClassSchedule(Model model, HttpSession session) {
-
-        Long memberId = (Long) session.getAttribute("loggedInMemberId");
-
-        if (memberId == null) {
-            return "redirect:/login";
-        }
-
-        List<FitnessClass> classes = fitnessClassRepository.findAll();
-
-        model.addAttribute("classes", classes);
-
+    public String showClassSchedule(Model model) {
+        model.addAttribute("classes", fitnessClassService.getAllClassesWithDetails());
         return "class-schedule";
     }
 
@@ -49,19 +38,9 @@ public class ClassScheduleController {
                                   HttpSession session,
                                   RedirectAttributes redirectAttributes) {
 
-        Long memberId = (Long) session.getAttribute("loggedInMemberId");
-
-        if (memberId == null) {
-            return "redirect:/login";
-        }
-
-        try {
-            reservationService.createReservation(memberId, classId);
-            redirectAttributes.addFlashAttribute("successMessage", "Rezerwacja zakończona pomyślnie!");
-        } catch (IllegalStateException e) {
-            redirectAttributes.addFlashAttribute("errorMessage", "Błąd rezerwacji: " + e.getMessage());
-        }
+        Long memberId = sessionService.getLoggedInMemberId(session);
+        reservationService.createReservation(memberId, classId);
+        redirectAttributes.addFlashAttribute("successMessage", "Rezerwacja zakończona pomyślnie!");
         return "redirect:/class-schedule";
     }
-
 }
