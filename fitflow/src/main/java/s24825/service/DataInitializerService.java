@@ -35,17 +35,25 @@ public class DataInitializerService {
 
     @PostConstruct
     public void initData() {
-        // 1. Create Trainers
+        // 1. Create Trainers with all required fields
         Trainer trainer1 = new Trainer();
         trainer1.setFirstName("Anna");
         trainer1.setLastName("Nowak");
-        trainer1.setLicenseNumber("T12345");
+        trainer1.setEmail("anna.nowak@fitflow.com");
+        trainer1.setPassword("password123");
+        trainer1.setDateOfBirth(LocalDate.of(1990, 5, 15));
+        trainer1.setPhone("123456789"); // Dodano numer telefonu
+        trainer1.setLicenseNumber("T-123456");
         trainerRepository.save(trainer1);
 
         Trainer trainer2 = new Trainer();
         trainer2.setFirstName("Piotr");
         trainer2.setLastName("Wiśniewski");
-        trainer2.setLicenseNumber("T67890");
+        trainer2.setEmail("piotr.wisniewski@fitflow.com");
+        trainer2.setPassword("password123");
+        trainer2.setDateOfBirth(LocalDate.of(1985, 10, 20));
+        trainer2.setPhone("987654321"); // Dodano numer telefonu
+        trainer2.setLicenseNumber("T-654321");
         trainerRepository.save(trainer2);
 
         // 2. Create Training Halls
@@ -100,6 +108,8 @@ public class DataInitializerService {
         member.setActive(true);
         member.setEmail("jan.kowalski@example.com");
         member.setPassword("password123");
+        member.setDateOfBirth(LocalDate.of(1995, 3, 25));
+        member.setPhone("555666777"); // Dodano numer telefonu
         member.setRegistrationDate(LocalDate.now().minusMonths(6));
 
         StandardMembership pass = new StandardMembership();

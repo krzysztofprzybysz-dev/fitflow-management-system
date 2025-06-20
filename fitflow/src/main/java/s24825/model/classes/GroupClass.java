@@ -6,9 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/**
- * Represents a group fitness class, a specific type of FitnessClass.
- */
 @Entity
 @Table(name = "group_classes")
 @Getter

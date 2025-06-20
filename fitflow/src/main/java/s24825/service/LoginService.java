@@ -5,14 +5,18 @@ import org.springframework.stereotype.Service;
 import s24825.exception.InvalidCredentialsException;
 import s24825.model.person.Member;
 import s24825.repository.MemberRepository;
+import s24825.repository.TrainerRepository;
 
 @Service
 public class LoginService {
 
-    private final MemberRepository memberRepository;
 
-    public LoginService(MemberRepository memberRepository) {
+    private final MemberRepository memberRepository;
+    private final TrainerRepository trainerRepository;
+
+    public LoginService(MemberRepository memberRepository, TrainerRepository trainerRepository) {
         this.memberRepository = memberRepository;
+        this.trainerRepository = trainerRepository;
     }
 
     public Member login(String email, String password) {

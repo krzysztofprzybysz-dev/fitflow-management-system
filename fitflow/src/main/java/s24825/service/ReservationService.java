@@ -53,4 +53,13 @@ public class ReservationService {
         Reservation reservation = new Reservation(member, fitnessClass);
         reservationRepository.save(reservation);
     }
+
+    @Transactional
+    public void removeReservation(Long reservationId) {
+        Reservation reservation = reservationRepository.findById(reservationId)
+                .orElseThrow(() -> new ResourceNotFoundException("Nie znaleziono rezerwacji o ID: " + reservationId));
+
+        reservationRepository.delete(reservation);
+
+    }
 }

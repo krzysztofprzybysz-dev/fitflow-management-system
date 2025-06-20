@@ -16,10 +16,6 @@ import s24825.model.person.Member;
 
 import java.time.LocalDate;
 
-/**
- * Abstract base class for member passes.
- * Implements JOINED inheritance strategy.
- */
 @Entity
 @Table(name = "memberships")
 @Inheritance(strategy = InheritanceType.JOINED)

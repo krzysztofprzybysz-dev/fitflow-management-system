@@ -11,6 +11,10 @@
 
 <div class="container mt-4">
     <h2>Moje Rezerwacje</h2>
+
+    <!-- Komunikat o sukcesie po usunięciu rezerwacji -->
+    <div th:if="${successMessage}" class="alert alert-success" role="alert" th:text="${successMessage}"></div>
+
     <p>Witaj, <span th:text="${member.firstName}"></span>! Oto lista Twoich nadchodzących rezerwacji.</p>
 
     <div th:if="${reservations.isEmpty()}" class="alert alert-info" role="alert">
@@ -25,6 +29,8 @@
             <th scope="col">Trener</th>
             <th scope="col">Sala</th>
             <th scope="col">Status</th>
+            <!-- Nowa kolumna na akcje -->
+            <th scope="col">Akcje</th>
         </tr>
         </thead>
         <tbody>
@@ -34,6 +40,17 @@
             <td th:text="${reservation.fitnessClass.trainer.firstName} + ' ' + ${reservation.fitnessClass.trainer.lastName}">Anna Nowak</td>
             <td th:text="${reservation.fitnessClass.trainingRoom.name}">Sala A</td>
             <td><span class="badge bg-success" th:text="${reservation.status}">Potwierdzona</span></td>
+            <td>
+                <!-- Formularz do wysyłania żądania DELETE -->
+                <form th:action="@{/my-reservations/remove/{id}(id=${reservation.id})}" th:method="post">
+                    <!-- Ukryte pole informujące Springa, że to jest żądanie DELETE -->
+                    <input type="hidden" name="_method" value="delete" />
+                    <button type="submit" class="btn btn-danger btn-sm"
+                            onclick="return confirm('Czy na pewno chcesz anulować tę rezerwację?');">
+                        Anuluj
+                    </button>
+                </form>
+            </td>
         </tr>
         </tbody>
     </table>
