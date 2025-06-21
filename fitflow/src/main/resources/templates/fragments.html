@@ -2,7 +2,6 @@
 <html lang="pl" xmlns:th="http://www.thymeleaf.org">
 <body>
 
-<!-- Navigation Bar Fragment -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" th:fragment="navbar">
     <div class="container-fluid">
         <a class="navbar-brand" th:href="@{/class-schedule}">FitFlow</a>
@@ -12,22 +11,47 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" th:href="@{/class-schedule}">Grafik Zajęć</a>
+                    <a class="nav-link" th:href="@{/class-schedule}">Główny Grafik</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" th:if="${session.loggedInUserRole == 'MEMBER'}">
                     <a class="nav-link" th:href="@{/my-reservations}">Moje Rezerwacje</a>
                 </li>
+                <li class="nav-item" th:if="${session.loggedInUserRole == 'TRAINER'}">
+                    <a class="nav-link" th:href="@{/my-trainer-classes}">Moje Zajęcia</a>
+                </li>
             </ul>
-            <ul class="navbar-nav">
-                <li class="nav-item" th:if="${session.loggedInMemberId != null}">
-                     <span class="navbar-text me-3" th:text="'Witaj, ' + ${session.loggedInMemberFirstName} + '!'">
-                        Witaj, Użytkowniku!
+
+            <ul class="navbar-nav align-items-center">
+
+                <li class="nav-item" th:if="${session.loggedInUserRole == 'MEMBER' && membershipTypeName != null}">
+                    <span class="navbar-text me-3" th:if="${membershipTypeName == 'Standard'}"
+                          title="Liczba wykorzystanych wejść w tym miesiącu">
+                        Wykorzystane wejścia: <b th:text="${membershipEntriesUsed}">0</b> / 20
+                    </span>
+                    <span class="navbar-text me-3" th:if="${membershipTypeName == 'Premium'}">
+                        Karnet: <b>Premium</b> (nielimitowane wejścia)
                     </span>
                 </li>
-                <li class="nav-item" th:if="${session.loggedInMemberId != null}">
+
+                <li class="nav-item me-3" th:if="${session.loggedInUserRole == 'MEMBER' && membershipTypeName == 'Standard'}">
+                    <form th:action="@{/my-memberships/upgrade-to-premium}" method="post" class="d-flex">
+                        <button type="submit" class="btn btn-warning btn-sm"
+                                onclick="return confirm('Czy na pewno chcesz ulepszyć swój karnet do wersji Premium?');">
+                            Przejdź na Premium
+                        </button>
+                    </form>
+                </li>
+
+
+                <li class="nav-item" th:if="${session.loggedInUserId != null}">
+                    <span class="navbar-text me-3">
+                        Witaj, <b th:text="${session.loggedInUserFirstName}"></b>!
+                    </span>
+                </li>
+                <li class="nav-item" th:if="${session.loggedInUserId != null}">
                     <a class="nav-link" th:href="@{/logout}">Wyloguj</a>
                 </li>
-                <li class="nav-item" th:unless="${session.loggedInMemberId != null}">
+                <li class="nav-item" th:unless="${session.loggedInUserId != null}">
                     <a class="nav-link" th:href="@{/login}">Zaloguj</a>
                 </li>
             </ul>

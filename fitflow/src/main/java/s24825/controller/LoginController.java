@@ -1,12 +1,12 @@
 package s24825.controller;
 
-
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import s24825.model.person.Member;
+import s24825.model.person.Person;
+import s24825.model.person.Trainer;
 import s24825.service.LoginService;
 import s24825.service.SessionService;
 
@@ -28,8 +28,13 @@ public class LoginController {
 
     @PostMapping("/login")
     public String processLogin(@RequestParam String email, @RequestParam String password, HttpSession session) {
-        Member member = loginService.login(email, password);
-        sessionService.loginUser(session, member);
+        Person person = loginService.login(email, password);
+        sessionService.loginUser(session, person);
+
+        if (person instanceof Trainer) {
+            return "redirect:/my-trainer-classes";
+        }
+
         return "redirect:/class-schedule";
     }
 

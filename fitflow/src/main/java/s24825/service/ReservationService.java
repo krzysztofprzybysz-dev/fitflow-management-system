@@ -50,6 +50,8 @@ public class ReservationService {
         FitnessClass fitnessClass = fitnessClassRepository.findById(fitnessClassId)
                 .orElseThrow(() -> new ResourceNotFoundException("Nie znaleziono zajęć o ID: " + fitnessClassId));
 
+        activePass.get().handleBooking();
+
         Reservation reservation = new Reservation(member, fitnessClass);
         reservationRepository.save(reservation);
     }

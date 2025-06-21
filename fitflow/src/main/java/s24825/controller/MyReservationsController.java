@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import s24825.model.person.Member;
 import s24825.model.reservation.Reservation;
@@ -24,9 +25,7 @@ public class MyReservationsController {
     private final SessionService sessionService;
     private final ReservationService reservationService;
 
-    public MyReservationsController(MemberService memberService,
-                                    SessionService sessionService,
-                                    ReservationService reservationService) {
+    public MyReservationsController(MemberService memberService, SessionService sessionService, ReservationService reservationService) {
         this.memberService = memberService;
         this.sessionService = sessionService;
         this.reservationService = reservationService;
@@ -34,8 +33,8 @@ public class MyReservationsController {
 
     @GetMapping("/my-reservations")
     public String showMyReservations(Model model, HttpSession session) {
-
-        Long memberId = sessionService.getLoggedInMemberId(session);
+        // Zabezpieczenie: Sprawdzamy, czy użytkownik jest zalogowany
+        Long memberId = sessionService.getLoggedInUserId(session);
         Member member = memberService.getMemberWithDetails(memberId);
 
         List<Reservation> sortedReservations = member.getReservations().stream()
@@ -43,20 +42,19 @@ public class MyReservationsController {
                 .collect(Collectors.toList());
 
         model.addAttribute("member", member);
-
         model.addAttribute("reservations", sortedReservations);
-
-        model.addAttribute("member", member);
         return "my-reservations";
     }
 
     @DeleteMapping("/my-reservations/remove/{id}")
-    public String removeReservation (RedirectAttributes redirectAttributes,
-                                     @PathVariable Long id) {
+    public String removeReservation(@PathVariable Long id,
+                                    HttpSession session,
+                                    RedirectAttributes redirectAttributes) {
 
+        // Zabezpieczenie: Sprawdzamy, czy użytkownik jest zalogowany
+        Long memberId = sessionService.getLoggedInUserId(session);
         reservationService.removeReservation(id);
         redirectAttributes.addFlashAttribute("successMessage", "Rezerwacja została pomyślnie usunięta!");
         return "redirect:/my-reservations";
-
     }
 }

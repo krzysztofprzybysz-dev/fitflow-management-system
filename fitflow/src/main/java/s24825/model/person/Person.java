@@ -1,5 +1,6 @@
 package s24825.model.person;
 
+import jakarta.persistence.Embedded;
 import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.Transient;
 import jakarta.validation.constraints.*;
@@ -7,6 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import s24825.model.other.Address;
 
 import java.time.LocalDate;
 
@@ -43,10 +45,15 @@ public abstract class Person {
     @Size(min = 8, max = 255, message = "Password must be between 8 and 255 characters")
     private String password;
 
+    @Embedded
+    private Address address;
+
     @Transient
     public int getAge() {
         return LocalDate.now().getYear() - dateOfBirth.getYear();
     }
+
+    public abstract Long getId();
 
 
 }
