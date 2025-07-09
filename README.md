@@ -73,7 +73,7 @@ Developed as a university project for Modeling and Systems Analysis (MAS) course
 ![Analytical Class Diagram](docs/DIAGRAM%20-%20ANALITYCZNY.png)
 
 #### Activity Diagram - Reservation Process
-![Activity Diagram](docs/DIAGRAM%20AKTYWNOSCI%20-%20REZERWACJA%20ZAJEC%20GRUPO.png)
+![Activity Diagram](docs/DIAGRAM%20AKTYWNOSCI%20-%20REZERWACJA%20ZAJEC%20GRUPOWYCH.png)
 
 #### State Diagram - Reservation Lifecycle
 ![State Diagram](docs/DIAGRAM%20STANU%20-%20KLASA%20REZERWACJA.png)
