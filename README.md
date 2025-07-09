@@ -109,7 +109,7 @@ Developed as a university project for Modeling and Systems Analysis (MAS) course
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/fitflow.git
+   git clone https://github.com/krzysztofprzybysz-dev/fitflow.git
    cd fitflow
    ```
 
