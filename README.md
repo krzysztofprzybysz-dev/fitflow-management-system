@@ -89,13 +89,13 @@ Developed as a university project for Modeling and Systems Analysis (MAS) course
 <details>
 <summary>Module 2: Classes and Facilities</summary>
 
-![Module 2 - Classes](docs/MODUL%202%20-%20ZAJECIA.png)
+![Module 2 - Classes](docs/MODUŁ%202%20-%20ZAJĘCIA.png)
 </details>
 
 <details>
 <summary>Module 3: Reservations and Notifications</summary>
 
-![Module 3 - Reservations](docs/MODUL%203%20-%20REZERWACJE.png)
+![Module 3 - Reservations](docs/MODUŁ%203%20-%20REZERWACJE.png)
 </details>
 
 ## 🚀 Getting Started
@@ -276,35 +276,8 @@ Full system documentation (in Polish) is available in the `/docs` folder:
 - 🖼️ GUI mockups and screenshots
 - 📝 Design decisions and patterns
 
-## 🙏 Acknowledgments
-
-- PJATK University for project requirements
-- Spring Boot community for excellent documentation
-- Bootstrap team for the UI framework
-
 ## 👤 Author
 
 **Krzysztof Przybysz**  
 Student ID: s24825  
 Polish-Japanese Academy of Information Technology
-
----
-
-### Repository Configuration
-
-**Repository name**: `fitflow-management-system`
-
-**Description**: 🏋️ Spring Boot fitness club management system with class scheduling, reservations & membership tracking | MAS Project
-
-**Topics/Tags**: 
-- `spring-boot`
-- `java`
-- `thymeleaf`
-- `fitness-management`
-- `web-application`
-- `h2-database`
-- `maven`
-- `bootstrap`
-- `state-pattern`
-- `university-project`
-- `pjatk`
