@@ -83,7 +83,7 @@ Developed as a university project for Modeling and Systems Analysis (MAS) course
 <details>
 <summary>Module 1: Users and Memberships</summary>
 
-![Module 1 - Users](docs/MODUL%201%20-%20UZYTKOWNICY.png)
+![Module 1 - Users](docs/MODUŁ%201%20-%20UŻYTKOWNICY.png)
 </details>
 
 <details>
