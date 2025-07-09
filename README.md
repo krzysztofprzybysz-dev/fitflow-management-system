@@ -64,13 +64,38 @@ Developed as a university project for Modeling and Systems Analysis (MAS) course
 | **Repository Pattern** | Data access layer | Separation of concerns, testability |
 | **MVC Pattern** | Overall architecture | Clear separation of presentation, logic, and data |
 
-### Entity Relationships
-<details>
-<summary>Click to view Entity Relationship Diagram</summary>
+### UML Diagrams
 
-```
-[Placeholder for ER Diagram]
-```
+#### Use Case Diagram
+![Use Case Diagram](docs/DIAGRAM%20-%20PRZYPADKOW%20UZYCIA.png)
+
+#### Class Diagram (Analytical)
+![Analytical Class Diagram](docs/DIAGRAM%20-%20ANALITYCZNY.png)
+
+#### Activity Diagram - Reservation Process
+![Activity Diagram](docs/DIAGRAM%20AKTYWNOSCI%20-%20REZERWACJA%20ZAJEC%20GRUPO.png)
+
+#### State Diagram - Reservation Lifecycle
+![State Diagram](docs/DIAGRAM%20STANU%20-%20KLASA%20REZERWACJA.png)
+
+### Detailed Class Diagrams
+
+<details>
+<summary>Module 1: Users and Memberships</summary>
+
+![Module 1 - Users](docs/MODUL%201%20-%20UZYTKOWNICY.png)
+</details>
+
+<details>
+<summary>Module 2: Classes and Facilities</summary>
+
+![Module 2 - Classes](docs/MODUL%202%20-%20ZAJECIA.png)
+</details>
+
+<details>
+<summary>Module 3: Reservations and Notifications</summary>
+
+![Module 3 - Reservations](docs/MODUL%203%20-%20REZERWACJE.png)
 </details>
 
 ## 🚀 Getting Started
@@ -116,42 +141,39 @@ Developed as a university project for Modeling and Systems Analysis (MAS) course
 ### Member Workflow
 
 1. **Login** to the system using your credentials
+
 2. **Browse** the class schedule
    
-   ![Class Schedule Screenshot]
-   ```
-   [Placeholder for Class Schedule Screenshot]
-   ```
+   ![Class Schedule](docs/Strona%20główna%20z%20grafikiem.png)
+   
+   The main dashboard displays available fitness classes with:
+   - Real-time availability status
+   - Trainer information
+   - Quick reservation buttons
 
 3. **Make a Reservation**
-   - Click "Reserve" button on desired class
-   - Confirm reservation details
-   - Receive confirmation
    
-   ![Reservation Modal Screenshot]
-   ```
-   [Placeholder for Reservation Modal Screenshot]
-   ```
+   ![Reservation Modal](docs/Modal%20rezerwacji.png)
+   
+   The reservation process includes:
+   - Membership status verification
+   - Available spots counter
+   - Email reminder preferences
 
-4. **Manage Reservations**
-   - View all your reservations
-   - Cancel up to 2 hours before class
+4. **Confirm Your Booking**
    
-   ![My Reservations Screenshot]
-   ```
-   [Placeholder for My Reservations Screenshot]
-   ```
+   ![Reservation Confirmation](docs/Potwierdzenie%20rezerwacji.png)
+   
+   After confirmation, you'll receive:
+   - Instant booking confirmation
+   - Email notification
+   - Option to view all reservations
 
 ### Trainer Workflow
 
-1. **View Your Classes**
-   ```
-   [Placeholder for Trainer Dashboard Screenshot]
-   ```
-
-2. **Check Participants**
-   - See who's registered for each class
-   - Track attendance
+1. **View Your Classes** - Access your assigned classes through the trainer dashboard
+2. **Check Participants** - See registered members for each class
+3. **Track Attendance** - Mark present participants during class
 
 ## 🔧 Technical Details
 
@@ -174,6 +196,11 @@ Developed as a university project for Modeling and Systems Analysis (MAS) course
 fitflow/
 ├── src/main/java/s24825/
 │   ├── controller/          # MVC Controllers
+│   │   ├── ClassScheduleController.java
+│   │   ├── LoginController.java
+│   │   ├── MembershipController.java
+│   │   ├── MyReservationsController.java
+│   │   └── TrainerController.java
 │   ├── model/              # Entity classes
 │   │   ├── classes/        # Fitness classes
 │   │   ├── membership/     # Membership & states
@@ -181,10 +208,13 @@ fitflow/
 │   │   └── reservation/    # Booking system
 │   ├── repository/         # Data access layer
 │   ├── service/           # Business logic
+│   │   ├── auth/          # Authentication strategies
+│   │   └── ...
 │   └── exception/         # Custom exceptions
 ├── src/main/resources/
 │   ├── templates/         # Thymeleaf views
 │   └── application.properties
+├── docs/                  # Documentation & diagrams
 └── pom.xml
 ```
 
@@ -198,17 +228,20 @@ fitflow/
 | `members` | Club member information |
 | `trainers` | Trainer profiles and specializations |
 | `fitness_classes` | Class definitions and schedules |
+| `group_classes` | Group fitness class specifics |
 | `reservations` | Booking records |
 | `memberships` | Membership/pass information |
 | `training_rooms` | Facility information |
+| `equipment` | Training equipment inventory |
 
 </details>
 
-### State Diagram: Reservation Lifecycle
+### Key Implementation Details
 
-```
-[Placeholder for Reservation State Diagram]
-```
+- **State Pattern**: The `Membership` class uses state pattern with `MembershipState` interface implemented by `StandardState`, `PremiumState`, and `ExpiredState`
+- **Authentication Strategy**: `UserFinder` interface with `MemberFinder` and `TrainerFinder` implementations
+- **Session Management**: Custom `SessionService` for handling user sessions
+- **Global Attributes**: `GlobalControllerAdvice` provides membership details across all views
 
 ## 🧪 Testing
 
@@ -237,13 +270,11 @@ This is a university project and is not open for contributions. However, feel fr
 
 ## 📄 Documentation
 
-Full system documentation (in Polish) including:
-- Requirements analysis
-- UML diagrams (Use Case, Class, Activity, State)
-- GUI mockups
-- Design decisions
-
-Available in the `/docs` folder.
+Full system documentation (in Polish) is available in the `/docs` folder:
+- 📕 [Complete Project Documentation (PDF)](docs/MAS_Projekt_Przybysz_Krzysztof_S24825.pdf)
+- 📊 UML Diagrams (Use Case, Class, Activity, State)
+- 🖼️ GUI mockups and screenshots
+- 📝 Design decisions and patterns
 
 ## 🙏 Acknowledgments
 
