@@ -1,0 +1,4861 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+.gitattributes
+fitflow/.gitignore
+fitflow/.idea/.gitignore
+fitflow/.idea/encodings.xml
+fitflow/.idea/misc.xml
+fitflow/.idea/uiDesigner.xml
+fitflow/.idea/vcs.xml
+fitflow/pom.xml
+fitflow/repomix-output.txt
+fitflow/src/main/java/s24825/controller/ClassScheduleController.java
+fitflow/src/main/java/s24825/controller/GlobalControllerAdvice.java
+fitflow/src/main/java/s24825/controller/LoginController.java
+fitflow/src/main/java/s24825/controller/MembershipController.java
+fitflow/src/main/java/s24825/controller/MyReservationsController.java
+fitflow/src/main/java/s24825/controller/TrainerController.java
+fitflow/src/main/java/s24825/exception/GlobalExceptionHandler.java
+fitflow/src/main/java/s24825/exception/InvalidCredentialsException.java
+fitflow/src/main/java/s24825/exception/ReservationException.java
+fitflow/src/main/java/s24825/exception/ResourceNotFoundException.java
+fitflow/src/main/java/s24825/exception/SessionExpiredException.java
+fitflow/src/main/java/s24825/FitflowApplication.java
+fitflow/src/main/java/s24825/model/classes/FitnessClass.java
+fitflow/src/main/java/s24825/model/classes/GroupClass.java
+fitflow/src/main/java/s24825/model/membership/Membership.java
+fitflow/src/main/java/s24825/model/membership/state/ExpiredState.java
+fitflow/src/main/java/s24825/model/membership/state/MembershipState.java
+fitflow/src/main/java/s24825/model/membership/state/PremiumState.java
+fitflow/src/main/java/s24825/model/membership/state/StandardState.java
+fitflow/src/main/java/s24825/model/other/Address.java
+fitflow/src/main/java/s24825/model/other/Equipment.java
+fitflow/src/main/java/s24825/model/other/TrainingRoom.java
+fitflow/src/main/java/s24825/model/person/Member.java
+fitflow/src/main/java/s24825/model/person/Person.java
+fitflow/src/main/java/s24825/model/person/Trainer.java
+fitflow/src/main/java/s24825/model/reservation/Reservation.java
+fitflow/src/main/java/s24825/model/reservation/ReservationStatus.java
+fitflow/src/main/java/s24825/repository/EquipmentRepository.java
+fitflow/src/main/java/s24825/repository/FitnessClassRepository.java
+fitflow/src/main/java/s24825/repository/MemberRepository.java
+fitflow/src/main/java/s24825/repository/ReservationRepository.java
+fitflow/src/main/java/s24825/repository/TrainerRepository.java
+fitflow/src/main/java/s24825/repository/TrainingRoomRepository.java
+fitflow/src/main/java/s24825/service/auth/MemberFinder.java
+fitflow/src/main/java/s24825/service/auth/TrainerFinder.java
+fitflow/src/main/java/s24825/service/auth/UserFinder.java
+fitflow/src/main/java/s24825/service/DataInitializerService.java
+fitflow/src/main/java/s24825/service/FitnessClassService.java
+fitflow/src/main/java/s24825/service/LoginService.java
+fitflow/src/main/java/s24825/service/MemberService.java
+fitflow/src/main/java/s24825/service/ReservationService.java
+fitflow/src/main/java/s24825/service/SessionService.java
+fitflow/src/main/java/s24825/service/TrainerService.java
+fitflow/src/main/resources/application.properties
+fitflow/src/main/resources/templates/class-schedule.html
+fitflow/src/main/resources/templates/fragments.html
+fitflow/src/main/resources/templates/login.html
+fitflow/src/main/resources/templates/my-reservations.html
+fitflow/src/main/resources/templates/trainer-class-details.html
+fitflow/src/main/resources/templates/trainer-classes.html
+untitled/.idea/compiler.xml
+untitled/.idea/vcs.xml
+untitled/.idea/workspace.xml
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="untitled/.idea/compiler.xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
+</file>
+
+<file path="untitled/.idea/vcs.xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+  </component>
+</project>
+</file>
+
+<file path="untitled/.idea/workspace.xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d087f119-b4c9-43bd-b29f-a3821a226440" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2zGt8WyQFNzAM2Ec7ndPfc99iyw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/kprzybysz/Documents/GitHub/mas-projekt/fitflow",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pl.nevader.Main" />
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.nevader.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d087f119-b4c9-43bd-b29f-a3821a226440" name="Changes" comment="" />
+      <created>1751369080786</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751369080786</updated>
+      <workItem from="1751369081797" duration="1526000" />
+      <workItem from="1751442793217" duration="3465000" />
+      <workItem from="1751534762591" duration="640000" />
+      <workItem from="1751536322425" duration="1657000" />
+      <workItem from="1751875570711" duration="4822000" />
+      <workItem from="1752047052755" duration="359000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
+</file>
+
+<file path=".gitattributes">
+# Auto detect text files and perform LF normalization
+* text=auto
+</file>
+
+<file path="fitflow/.idea/.gitignore">
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+</file>
+
+<file path="fitflow/.idea/encodings.xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
+</file>
+
+<file path="fitflow/.idea/uiDesigner.xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Palette2">
+    <group name="Swing">
+      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.svg" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
+      </item>
+      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.svg" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
+      </item>
+      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.svg" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.svg" removable="false" auto-create-binding="false" can-attach-label="true">
+        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
+        <initial-values>
+          <property name="text" value="Button" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="RadioButton" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="CheckBox" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.svg" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="Label" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.svg" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.svg" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.svg" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.svg" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.svg" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.svg" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.svg" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+          <preferred-size width="200" height="200" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.svg" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+          <preferred-size width="200" height="200" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.svg" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.svg" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
+      </item>
+      <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.svg" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
+          <preferred-size width="-1" height="20" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.svg" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
+      </item>
+      <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.svg" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
+      </item>
+    </group>
+  </component>
+</project>
+</file>
+
+<file path="fitflow/.idea/vcs.xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+  </component>
+</project>
+</file>
+
+<file path="fitflow/src/main/java/s24825/controller/GlobalControllerAdvice.java">
+package s24825.controller;
+
+import jakarta.servlet.http.HttpSession;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import s24825.model.membership.Membership;
+import s24825.repository.MemberRepository;
+import s24825.service.SessionService;
+
+/**
+ * This class provides global attributes to the model for all controllers.
+ * It's used here to add membership details to the model for every request,
+ * making them available in the navbar fragment.
+ */
+@ControllerAdvice
+public class GlobalControllerAdvice {
+
+    private final SessionService sessionService;
+    private final MemberRepository memberRepository;
+
+    public GlobalControllerAdvice(SessionService sessionService, MemberRepository memberRepository) {
+        this.sessionService = sessionService;
+        this.memberRepository = memberRepository;
+    }
+
+    @ModelAttribute
+    public void addGlobalAttributes(Model model, HttpSession session) {
+        try {
+            if ("MEMBER".equals(session.getAttribute("loggedInUserRole"))) {
+                Long memberId = (Long) session.getAttribute("loggedInUserId");
+                if (memberId != null) {
+                    // Fetch the member and their active pass
+                    memberRepository.findByIdWithMemberships(memberId).ifPresent(member -> {
+                        member.getMemberships().stream()
+                                .filter(Membership::isActive)
+                                .findFirst()
+                                .ifPresent(activePass -> {
+                                    // Add details of the active pass to the model
+                                    model.addAttribute("membershipTypeName", activePass.getTypeName());
+                                    model.addAttribute("membershipEntriesUsed", activePass.getEntriesUsed());
+                                });
+                    });
+                }
+            }
+        } catch (Exception e) {
+            // If session is invalid or user is not a member, do nothing.
+        }
+    }
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/controller/MembershipController.java">
+package s24825.controller;
+
+import jakarta.servlet.http.HttpSession;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import s24825.service.MemberService;
+import s24825.service.SessionService;
+
+@Controller
+public class MembershipController {
+
+    private final SessionService sessionService;
+    private final MemberService memberService;
+
+    public MembershipController(SessionService sessionService, MemberService memberService) {
+        this.sessionService = sessionService;
+        this.memberService = memberService;
+    }
+
+    @PostMapping("/my-memberships/upgrade-to-premium")
+    public String upgradeToPremium(HttpSession session, RedirectAttributes redirectAttributes) {
+        Long memberId = sessionService.getLoggedInUserId(session);
+        memberService.upgradeMembershipToPremium(memberId);
+        redirectAttributes.addFlashAttribute("successMessage", "Gratulacje! Twój karnet został ulepszony do wersji Premium!");
+        return "redirect:/my-reservations"; // Przekieruj na stronę, gdzie widać zmiany
+    }
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/controller/TrainerController.java">
+package s24825.controller;
+
+import jakarta.servlet.http.HttpSession;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import s24825.model.classes.FitnessClass;
+import s24825.service.SessionService;
+import s24825.service.TrainerService;
+import java.util.List;
+
+@Controller
+public class TrainerController {
+
+    private final TrainerService trainerService;
+    private final SessionService sessionService;
+
+    public TrainerController(TrainerService trainerService, SessionService sessionService) {
+        this.trainerService = trainerService;
+        this.sessionService = sessionService;
+    }
+
+    @GetMapping("/my-trainer-classes")
+    public String showTrainerClasses(Model model, HttpSession session) {
+        // Zabezpieczenie: Sprawdzamy, czy użytkownik jest zalogowany
+        Long trainerId = sessionService.getLoggedInUserId(session);
+        List<FitnessClass> classes = trainerService.getClassesForTrainer(trainerId);
+        model.addAttribute("classes", classes);
+        return "trainer-classes";
+    }
+
+    @GetMapping("/my-trainer-classes/{id}")
+    public String showClassDetails(@PathVariable("id") Long classId, Model model, HttpSession session) {
+        // Zabezpieczenie: Sprawdzamy, czy użytkownik jest zalogowany
+        Long trainerId = sessionService.getLoggedInUserId(session);
+        FitnessClass fitnessClass = trainerService.getClassDetailsForTrainer(classId, trainerId);
+        model.addAttribute("fitnessClass", fitnessClass);
+        return "trainer-class-details";
+    }
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/exception/GlobalExceptionHandler.java">
+package s24825.exception;
+
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+@ControllerAdvice
+public class GlobalExceptionHandler {
+
+    @ExceptionHandler(ReservationException.class)
+    public String handleReservationException(ReservationException ex, RedirectAttributes redirectAttributes) {
+        redirectAttributes.addFlashAttribute("errorMessage", ex.getMessage());
+        return "redirect:/class-schedule";
+    }
+
+    @ExceptionHandler(InvalidCredentialsException.class)
+    public String handleInvalidCredentialsException(InvalidCredentialsException ex, RedirectAttributes redirectAttributes) {
+        redirectAttributes.addFlashAttribute("error", ex.getMessage());
+        return "redirect:/login";
+    }
+
+    @ExceptionHandler(SessionExpiredException.class)
+    public String handleSessionExpiredException(SessionExpiredException ex, RedirectAttributes redirectAttributes) {
+        redirectAttributes.addFlashAttribute("error", ex.getMessage());
+        return "redirect:/login";
+    }
+
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public String handleResourceNotFoundException(ResourceNotFoundException ex, RedirectAttributes redirectAttributes) {
+        redirectAttributes.addFlashAttribute("errorMessage", ex.getMessage());
+        return "redirect:/class-schedule";
+    }
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/exception/InvalidCredentialsException.java">
+package s24825.exception;
+
+public class InvalidCredentialsException extends RuntimeException {
+    public InvalidCredentialsException(String message) {
+        super(message);
+    }
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/exception/ReservationException.java">
+package s24825.exception;
+
+public class ReservationException extends RuntimeException {
+    public ReservationException(String message) {
+        super(message);
+    }
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/exception/ResourceNotFoundException.java">
+package s24825.exception;
+
+public class ResourceNotFoundException extends RuntimeException {
+    public ResourceNotFoundException(String message) {
+        super(message);
+    }
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/exception/SessionExpiredException.java">
+package s24825.exception;
+
+public class SessionExpiredException extends RuntimeException {
+    public SessionExpiredException(String message) {
+        super(message);
+    }
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/model/membership/state/ExpiredState.java">
+package s24825.model.membership.state;
+
+import s24825.model.membership.Membership;
+
+public class ExpiredState implements MembershipState {
+
+    @Override
+    public boolean canBook(Membership context) {
+        return false;
+    }
+
+    @Override
+    public String getTypeName() {
+        return "Expired";
+    }
+
+    @Override
+    public void handleBooking(Membership context) {
+    }
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/model/membership/state/MembershipState.java">
+package s24825.model.membership.state;
+
+import s24825.model.membership.Membership;
+
+/**
+ * Interface representing the state of a Membership, according to the State design pattern.
+ * It allows a membership's behavior to change when its state changes.
+ */
+public interface MembershipState {
+
+
+    boolean canBook(Membership context);
+
+    String getTypeName();
+
+    void handleBooking(Membership context);
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/model/membership/state/PremiumState.java">
+package s24825.model.membership.state;
+
+import s24825.model.membership.Membership;
+
+public class PremiumState implements MembershipState {
+
+    @Override
+    public boolean canBook(Membership context) {
+        return context.isActive();
+    }
+
+    @Override
+    public String getTypeName() {
+        return "Premium";
+    }
+
+    @Override
+    public void handleBooking(Membership context) {
+        // No usage to track for premium, so this method does nothing.
+    }
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/model/membership/state/StandardState.java">
+package s24825.model.membership.state;
+
+import s24825.model.membership.Membership;
+
+public class StandardState implements MembershipState {
+
+    private static final int STANDARD_ENTRY_LIMIT = 20;
+
+    @Override
+    public boolean canBook(Membership context) {
+        // A standard membership is valid if it's active and the entry limit has not been reached.
+        return context.isActive() && context.getEntriesUsed() < STANDARD_ENTRY_LIMIT;
+    }
+
+    @Override
+    public String getTypeName() {
+        return "Standard";
+    }
+
+    @Override
+    public void handleBooking(Membership context) {
+        if (canBook(context)) {
+            context.setEntriesUsed(context.getEntriesUsed() + 1);
+        }
+    }
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/model/other/Address.java">
+package s24825.model.other;
+
+import jakarta.annotation.Nullable;
+import jakarta.persistence.Embeddable;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Embeddable
+@Getter
+@Setter
+@NoArgsConstructor
+public class Address {
+
+    @NotBlank(message = "Street is required")
+    @Size(min = 2, max = 255, message = "Street must be between 2 and 255 characters")
+    private String street;
+
+    @NotBlank(message = "House number is required")
+    @Size(min = 1, max = 10, message = "House number must be between 1 and 10 characters")
+    private String houseNumber;
+
+    @Size(max = 10, message = "Apartment number must be up to 10 characters")
+    @Nullable
+    private String apartmentNumber;
+
+    @NotBlank(message = "City is required")
+    @Size(min = 2, max = 255, message = "City must be between 2 and 255 characters")
+    private String city;
+
+    @NotBlank(message = "Postal code is required")
+    @Size(min = 5, max = 10, message = "Postal code must be between 5 and 10 characters")
+    private String postalCode;
+
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/model/other/Equipment.java">
+package s24825.model.other;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Table(name = "equipment")
+@Getter
+@Setter
+@NoArgsConstructor
+public class Equipment {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @NotBlank(message = "Name is required")
+    @Column(nullable = false, length = 255)
+    private String name;
+
+    @NotBlank(message = "Type is required")
+    @Column(nullable = false, length = 100)
+    private String type;
+
+    @Column(unique = true, nullable = false)
+    private String serialNumber;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "training_room_id")
+    private TrainingRoom trainingRoom;
+
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/model/reservation/Reservation.java">
+package s24825.model.reservation;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import s24825.model.classes.FitnessClass;
+import s24825.model.person.Member;
+
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "reservations")
+@Getter
+@Setter
+@NoArgsConstructor
+public class Reservation {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private LocalDateTime reservationDate;
+
+    @Enumerated(EnumType.STRING)
+    private ReservationStatus status;
+
+    @ManyToOne
+    @JoinColumn(name = "member_id", nullable = false)
+    private Member member;
+
+    @ManyToOne
+    @JoinColumn(name = "fitness_class_id", nullable = false)
+    private FitnessClass fitnessClass;
+
+    public Reservation(Member member, FitnessClass fitnessClass) {
+        this.member = member;
+        this.fitnessClass = fitnessClass;
+        this.reservationDate = LocalDateTime.now();
+        this.status = ReservationStatus.CONFIRMED;
+    }
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/model/reservation/ReservationStatus.java">
+package s24825.model.reservation;
+
+public enum ReservationStatus {
+    CONFIRMED,
+    CANCELLED,
+    WAITING_LIST
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/repository/EquipmentRepository.java">
+package s24825.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import s24825.model.other.Equipment;
+
+@Repository
+public interface EquipmentRepository extends JpaRepository<Equipment, Long> {
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/repository/TrainingRoomRepository.java">
+package s24825.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import s24825.model.other.TrainingRoom;
+
+@Repository
+public interface TrainingRoomRepository extends JpaRepository<TrainingRoom, Long> {
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/service/auth/MemberFinder.java">
+package s24825.service.auth;
+
+import org.springframework.stereotype.Component;
+import s24825.model.person.Person;
+import s24825.repository.MemberRepository;
+import java.util.Optional;
+
+@Component
+public class MemberFinder implements UserFinder {
+
+    private final MemberRepository memberRepository;
+
+    public MemberFinder(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
+
+    @Override
+    public Optional<Person> findByEmail(String email) {
+        return memberRepository.findByEmail(email).map(person -> person);
+    }
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/service/auth/TrainerFinder.java">
+package s24825.service.auth;
+
+import org.springframework.stereotype.Component;
+import s24825.model.person.Person;
+import s24825.repository.TrainerRepository;
+import java.util.Optional;
+
+@Component
+public class TrainerFinder implements UserFinder {
+    private final TrainerRepository trainerRepository;
+
+    public TrainerFinder(TrainerRepository trainerRepository) {
+        this.trainerRepository = trainerRepository;
+    }
+
+    @Override
+    public Optional<Person> findByEmail(String email) {
+        return trainerRepository.findByEmail(email).map(person -> person);
+    }
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/service/auth/UserFinder.java">
+package s24825.service.auth;
+
+import s24825.model.person.Person;
+import java.util.Optional;
+
+/**
+ * Interfejs strategii do wyszukiwania różnych typów użytkowników.
+ * Każda implementacja będzie odpowiedzialna za przeszukanie jednego repozytorium.
+ */
+public interface UserFinder {
+    Optional<Person> findByEmail(String email);
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/service/FitnessClassService.java">
+package s24825.service;
+
+import org.springframework.stereotype.Service;
+import s24825.model.classes.FitnessClass;
+import s24825.repository.FitnessClassRepository;
+import java.util.List;
+
+@Service
+public class FitnessClassService {
+
+    private final FitnessClassRepository fitnessClassRepository;
+
+    public FitnessClassService(FitnessClassRepository fitnessClassRepository) {
+        this.fitnessClassRepository = fitnessClassRepository;
+    }
+
+    public List<FitnessClass> getAllClassesWithDetails() {
+        return fitnessClassRepository.findAllWithDetails();
+    }
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/service/TrainerService.java">
+package s24825.service;
+
+import org.springframework.stereotype.Service;
+import s24825.exception.ResourceNotFoundException;
+import s24825.model.classes.FitnessClass;
+import s24825.repository.FitnessClassRepository;
+import java.util.List;
+
+@Service
+public class TrainerService {
+
+    private final FitnessClassRepository fitnessClassRepository;
+
+    public TrainerService(FitnessClassRepository fitnessClassRepository) {
+        this.fitnessClassRepository = fitnessClassRepository;
+    }
+
+    public List<FitnessClass> getClassesForTrainer(Long trainerId) {
+        return fitnessClassRepository.findByTrainerIdWithDetails(trainerId);
+    }
+
+    public FitnessClass getClassDetailsForTrainer(Long classId, Long trainerId) {
+        return fitnessClassRepository.findByIdAndTrainerIdWithParticipants(classId, trainerId)
+                .orElseThrow(() -> new ResourceNotFoundException("Nie znaleziono zajęć o ID: " + classId + " lub nie jesteś do nich przypisany."));
+    }
+}
+</file>
+
+<file path="fitflow/src/main/resources/templates/trainer-class-details.html">
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Szczegóły Zajęć - FitFlow</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div th:replace="~{fragments :: navbar}"></div>
+
+<div class="container mt-4">
+    <a th:href="@{/my-trainer-classes}" class="btn btn-outline-secondary mb-3">&larr; Powrót do listy zajęć</a>
+
+    <h2 th:text="${fitnessClass.name}">Nazwa Zajęć</h2>
+    <p class="lead" th:text="${fitnessClass.description}">Opis zajęć.</p>
+    <hr>
+
+    <h4>Lista Uczestników (<span th:text="${fitnessClass.reservations.size()}">0</span>)</h4>
+
+    <div th:if="${fitnessClass.reservations.isEmpty()}" class="alert alert-info mt-3">
+        Brak zapisanych uczestników na te zajęcia.
+    </div>
+
+    <ul class="list-group mt-3" th:if="${!fitnessClass.reservations.isEmpty()}">
+        <li class="list-group-item" th:each="reservation : ${fitnessClass.reservations}">
+            <span th:text="${reservation.member.firstName} + ' ' + ${reservation.member.lastName}"></span>
+            <small class="text-muted" th:text="' - ' + ${reservation.member.email}"></small>
+        </li>
+    </ul>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+</file>
+
+<file path="fitflow/src/main/resources/templates/trainer-classes.html">
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Moje Zajęcia - FitFlow</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div th:replace="~{fragments :: navbar}"></div>
+
+<div class="container mt-4">
+    <h2>Moje Zajęcia</h2>
+    <p>Poniżej znajduje się lista wszystkich zajęć, które prowadzisz.</p>
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Nazwa Zajęć</th>
+            <th scope="col">Data i Godzina</th>
+            <th scope="col">Sala</th>
+            <th scope="col">Zapisani / Limit</th>
+            <th scope="col">Szczegóły</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="class : ${classes}">
+            <td class="align-middle" th:text="${class.name}">Nazwa</td>
+            <td class="align-middle" th:text="${#temporals.format(class.dateTime, 'dd.MM.yyyy HH:mm')}">Data</td>
+            <td class="align-middle" th:text="${class.trainingRoom.name}">Nazwa Sali</td>
+
+            <td class="align-middle">
+                <div class="d-flex align-items-center">
+                    <div class="progress flex-grow-1" style="height: 25px;" th:if="${class.capacity > 0}">
+                        <div class="progress-bar" role="progressbar"
+                             th:style="'width:' + (${class.numberOfReservations} * 100.0 / ${class.capacity}) + '%;'"
+                             th:aria-valuenow="${class.numberOfReservations}"
+                             th:aria-valuemin="0"
+                             th:aria-valuemax="${class.capacity}">
+                        </div>
+                    </div>
+                    <span class="ms-2 fw-bold" th:text="${class.numberOfReservations} + ' / ' + ${class.capacity}"></span>
+                </div>
+            </td>
+            <td class="align-middle">
+                <a th:href="@{/my-trainer-classes/{id}(id=${class.id})}" class="btn btn-primary btn-sm">Zobacz szczegóły</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+</file>
+
+<file path="fitflow/.gitignore">
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### IntelliJ IDEA ###
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/libraries/
+*.iws
+*.iml
+*.ipr
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+</file>
+
+<file path="fitflow/.idea/misc.xml">
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="corretto-21" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
+</file>
+
+<file path="fitflow/src/main/java/s24825/FitflowApplication.java">
+package s24825;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+
+@SpringBootApplication
+public class FitflowApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(FitflowApplication.class, args);
+    }
+
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/model/classes/FitnessClass.java">
+package s24825.model.classes;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import s24825.model.reservation.Reservation;
+import s24825.model.reservation.ReservationStatus;
+import s24825.model.other.TrainingRoom;
+import s24825.model.person.Trainer;
+
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+
+@Entity
+@Table(name = "fitness_classes")
+@Inheritance(strategy = InheritanceType.JOINED)
+@Getter
+@Setter
+@NoArgsConstructor
+@NamedEntityGraph(
+        name = "FitnessClass.withDetails",
+        attributeNodes = {
+                @NamedAttributeNode("reservations"),
+                @NamedAttributeNode("trainer"),
+                @NamedAttributeNode("trainingRoom")
+        }
+)
+public abstract class FitnessClass {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+    private String description;
+    private LocalDateTime dateTime;
+    private int durationInMinutes;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "trainer_id")
+    private Trainer trainer;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "training_room_id")
+    private TrainingRoom trainingRoom;
+
+    @OneToMany(mappedBy = "fitnessClass", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<Reservation> reservations = new HashSet<>();
+
+    public abstract int getCapacity();
+
+    public int getNumberOfReservations() {
+        return (int) reservations.stream()
+                .filter(r -> r.getStatus() == ReservationStatus.CONFIRMED)
+                .count();
+    }
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/model/classes/GroupClass.java">
+package s24825.model.classes;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Table(name = "group_classes")
+@Getter
+@Setter
+@NoArgsConstructor
+public class GroupClass extends FitnessClass {
+
+    private int participantLimit;
+
+    @Override
+    public int getCapacity() {
+        return getParticipantLimit();
+    }
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/model/other/TrainingRoom.java">
+package s24825.model.other;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.HashMap;
+import java.util.Map;
+
+
+@Entity
+@Table(name = "training_rooms")
+@Getter
+@Setter
+@NoArgsConstructor
+public class TrainingRoom {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(unique = true, nullable = false)
+    private String number;
+
+    private String name;
+    private int capacity;
+
+    @OneToMany(mappedBy = "trainingRoom", cascade = CascadeType.ALL, orphanRemoval = true)
+    @MapKey(name = "serialNumber")
+    private Map<String, Equipment> equipment = new HashMap<>();
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/model/person/Member.java">
+package s24825.model.person;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import s24825.model.membership.Membership;
+import s24825.model.reservation.Reservation;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+@Entity
+@Table(name = "members")
+@Getter
+@Setter
+@NoArgsConstructor
+public class Member extends Person {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(unique = true, nullable = false)
+    private String memberNumber;
+
+    private LocalDate registrationDate;
+    private boolean active;
+
+    @OneToMany(mappedBy = "member", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<Membership> memberships = new HashSet<>();
+
+
+    @OneToMany(mappedBy = "member", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<Reservation> reservations = new HashSet<>();
+
+    public void addPass(Membership membership) {
+        memberships.add(membership);
+        membership.setMember(this);
+    }
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/model/person/Trainer.java">
+package s24825.model.person;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Represents a trainer at the fitness club.
+ */
+@Entity
+@Table(name = "trainers")
+@Getter
+@Setter
+@NoArgsConstructor
+public class Trainer extends Person {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(unique = true, nullable = false)
+    private String licenseNumber;
+
+    @ElementCollection
+    @CollectionTable(name = "trainer_specializations", joinColumns = @JoinColumn(name = "trainer_id"))
+    @Column(name = "specialization", nullable = false)
+    private List<String> specializations = new ArrayList<>();
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/repository/TrainerRepository.java">
+package s24825.repository;
+
+import jakarta.persistence.QueryHint;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.QueryHints;
+import org.springframework.stereotype.Repository;
+import s24825.model.person.Trainer;
+
+import java.util.Optional;
+
+@Repository
+public interface TrainerRepository extends JpaRepository<Trainer, Long> {
+
+    @QueryHints({ @QueryHint(name = "org.hibernate.comment", value = "[TrainerRepo] Find trainer by email") })
+    Optional<Trainer> findByEmail(String email);
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/service/MemberService.java">
+package s24825.service;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import s24825.exception.ResourceNotFoundException;
+import s24825.exception.ReservationException;
+import s24825.model.membership.Membership;
+import s24825.model.person.Member;
+import s24825.repository.MemberRepository;
+
+@Service
+public class MemberService {
+
+    private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
+
+    public Member getMemberWithDetails(Long memberId) {
+        return memberRepository.findByIdWithDetails(memberId)
+                .orElseThrow(() -> new ResourceNotFoundException("Nie znaleziono danych użytkownika."));
+    }
+
+    // NOWA METODA
+    @Transactional
+    public void upgradeMembershipToPremium(Long memberId) {
+        Member member = memberRepository.findByIdWithMemberships(memberId)
+                .orElseThrow(() -> new ResourceNotFoundException("Nie znaleziono członka o ID: " + memberId));
+
+        Membership activePass = member.getMemberships().stream()
+                .filter(Membership::isActive)
+                .findFirst()
+                .orElseThrow(() -> new ReservationException("Brak aktywnego karnetu do ulepszenia."));
+
+        // Wywołujemy metodę, którą zaimplementowaliśmy w ramach wzorca Stan
+        activePass.upgradeToPremium();
+
+        // Zapisujemy zmiany. Dzięki kaskadzie, zmiany w karnecie zostaną utrwalone.
+        memberRepository.save(member);
+    }
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/service/SessionService.java">
+package s24825.service;
+
+import jakarta.servlet.http.HttpSession;
+import org.springframework.stereotype.Service;
+import s24825.exception.SessionExpiredException;
+import s24825.model.person.Member;
+import s24825.model.person.Person;
+import s24825.model.person.Trainer;
+
+@Service
+public class SessionService {
+
+    private static final String USER_ID_ATTRIBUTE = "loggedInUserId";
+    private static final String USER_NAME_ATTRIBUTE = "loggedInUserFirstName";
+    private static final String USER_ROLE_ATTRIBUTE = "loggedInUserRole";
+
+    public Long getLoggedInUserId(HttpSession session) {
+        Long userId = (Long) session.getAttribute(USER_ID_ATTRIBUTE);
+        if (userId == null) {
+            throw new SessionExpiredException("Sesja wygasła. Proszę się zalogować ponownie.");
+        }
+        return userId;
+    }
+
+    public String getLoggedInUserRole(HttpSession session) {
+        return (String) session.getAttribute(USER_ROLE_ATTRIBUTE);
+    }
+
+    public void loginUser(HttpSession session, Person person) {
+        session.setAttribute(USER_ID_ATTRIBUTE, person.getId());
+        session.setAttribute(USER_NAME_ATTRIBUTE, person.getFirstName());
+
+        if (person instanceof Member) {
+            session.setAttribute(USER_ROLE_ATTRIBUTE, "MEMBER");
+        } else if (person instanceof Trainer) {
+            session.setAttribute(USER_ROLE_ATTRIBUTE, "TRAINER");
+        }
+    }
+}
+</file>
+
+<file path="fitflow/src/main/resources/templates/login.html">
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Logowanie - FitFlow</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .login-form {
+            width: 100%;
+            max-width: 400px;
+            padding: 15px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<main class="login-form">
+    <form th:action="@{/login}" method="post">
+        <h1 class="h3 mb-3 fw-normal text-center">FitFlow Logowanie</h1>
+        <p class="text-center">Proszę się zalogować, używając adresu e-mail.</p>
+
+        <div th:if="${error}" class="alert alert-danger" role="alert" th:text="${error}">
+            Błędne dane.
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email" name="email" placeholder="jan.kowalski@example.com" required>
+            <label for="email">Adres email</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password" value="password123" required>
+            <label for="password">Hasło</label>
+        </div>
+
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Zaloguj się</button>
+    </form>
+</main>
+</body>
+</html>
+</file>
+
+<file path="fitflow/pom.xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.4.1</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>s24825</groupId>
+    <artifactId>fitflow</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <org.mapstruct.version>1.6.0</org.mapstruct.version>
+        <org.projectlombok.version>1.18.30</org.projectlombok.version>
+        <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <!-- Spring Boot Starter for building web, including RESTful, applications using Spring MVC -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+        <!-- Spring Boot Starter for using Spring Data JPA with Hibernate -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!-- Spring Boot Starter for using Thymeleaf views -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <!-- H2 Database Engine -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>${org.mapstruct.version}</version>
+        </dependency>
+
+        <!-- Project Lombok to reduce boilerplate code -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${org.projectlombok.version}</version>
+        </dependency>
+
+        <!-- Spring Boot Starter for testing -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Spring Boot Starter for validation -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${org.mapstruct.version}</version>
+                        </path>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${org.projectlombok.version}</version>
+                        </path>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok-mapstruct-binding</artifactId>
+                            <version>${lombok-mapstruct-binding.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <includes>
+                        <include>**/*Test.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
+</file>
+
+<file path="fitflow/repomix-output.txt">
+This file is a merged representation of the entire codebase, combining all repository files into a single document.
+Generated by Repomix on: 2025-06-21T00:02:26.024Z
+
+================================================================
+File Summary
+================================================================
+
+Purpose:
+--------
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+
+File Format:
+------------
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Repository structure
+4. Multiple file entries, each consisting of:
+  a. A separator line (================)
+  b. The file path (File: path/to/file)
+  c. Another separator line
+  d. The full contents of the file
+  e. A blank line
+
+Usage Guidelines:
+-----------------
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+
+Notes:
+------
+- Some files may have been excluded based on .gitignore rules and Repomix's
+  configuration.
+- Binary files are not included in this packed representation. Please refer to
+  the Repository Structure section for a complete list of file paths, including
+  binary files.
+
+Additional Info:
+----------------
+
+For more information about Repomix, visit: https://github.com/yamadashy/repomix
+
+================================================================
+Repository Structure
+================================================================
+.gitignore
+pom.xml
+src/main/java/s24825/controller/ClassScheduleController.java
+src/main/java/s24825/controller/LoginController.java
+src/main/java/s24825/controller/MyReservationsController.java
+src/main/java/s24825/controller/TrainerController.java
+src/main/java/s24825/exception/GlobalExceptionHandler.java
+src/main/java/s24825/exception/InvalidCredentialsException.java
+src/main/java/s24825/exception/ReservationException.java
+src/main/java/s24825/exception/ResourceNotFoundException.java
+src/main/java/s24825/exception/SessionExpiredException.java
+src/main/java/s24825/FitflowApplication.java
+src/main/java/s24825/model/classes/FitnessClass.java
+src/main/java/s24825/model/classes/GroupClass.java
+src/main/java/s24825/model/membership/Membership.java
+src/main/java/s24825/model/membership/state/ExpiredState.java
+src/main/java/s24825/model/membership/state/MembershipState.java
+src/main/java/s24825/model/membership/state/PremiumState.java
+src/main/java/s24825/model/membership/state/StandardState.java
+src/main/java/s24825/model/other/Address.java
+src/main/java/s24825/model/other/Equipment.java
+src/main/java/s24825/model/other/TrainingRoom.java
+src/main/java/s24825/model/person/Member.java
+src/main/java/s24825/model/person/Person.java
+src/main/java/s24825/model/person/Trainer.java
+src/main/java/s24825/model/reservation/Reservation.java
+src/main/java/s24825/model/reservation/ReservationStatus.java
+src/main/java/s24825/repository/EquipmentRepository.java
+src/main/java/s24825/repository/FitnessClassRepository.java
+src/main/java/s24825/repository/MemberRepository.java
+src/main/java/s24825/repository/ReservationRepository.java
+src/main/java/s24825/repository/TrainerRepository.java
+src/main/java/s24825/repository/TrainingRoomRepository.java
+src/main/java/s24825/service/auth/MemberFinder.java
+src/main/java/s24825/service/auth/TrainerFinder.java
+src/main/java/s24825/service/auth/UserFinder.java
+src/main/java/s24825/service/DataInitializerService.java
+src/main/java/s24825/service/FitnessClassService.java
+src/main/java/s24825/service/LoginService.java
+src/main/java/s24825/service/MemberService.java
+src/main/java/s24825/service/ReservationService.java
+src/main/java/s24825/service/SessionService.java
+src/main/java/s24825/service/TrainerService.java
+src/main/resources/application.properties
+src/main/resources/templates/class-schedule.html
+src/main/resources/templates/fragments.html
+src/main/resources/templates/login.html
+src/main/resources/templates/my-reservations.html
+src/main/resources/templates/trainer-class-details.html
+src/main/resources/templates/trainer-classes.html
+
+================================================================
+Repository Files
+================================================================
+
+================
+File: .gitignore
+================
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### IntelliJ IDEA ###
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/libraries/
+*.iws
+*.iml
+*.ipr
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+
+================
+File: pom.xml
+================
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.4.1</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>s24825</groupId>
+    <artifactId>fitflow</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <org.mapstruct.version>1.6.0</org.mapstruct.version>
+        <org.projectlombok.version>1.18.30</org.projectlombok.version>
+        <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <!-- Spring Boot Starter for building web, including RESTful, applications using Spring MVC -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+        <!-- Spring Boot Starter for using Spring Data JPA with Hibernate -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!-- Spring Boot Starter for using Thymeleaf views -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <!-- H2 Database Engine -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>${org.mapstruct.version}</version>
+        </dependency>
+
+        <!-- Project Lombok to reduce boilerplate code -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${org.projectlombok.version}</version>
+        </dependency>
+
+        <!-- Spring Boot Starter for testing -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Spring Boot Starter for validation -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${org.mapstruct.version}</version>
+                        </path>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${org.projectlombok.version}</version>
+                        </path>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok-mapstruct-binding</artifactId>
+                            <version>${lombok-mapstruct-binding.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <includes>
+                        <include>**/*Test.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
+
+================
+File: src/main/java/s24825/controller/ClassScheduleController.java
+================
+package s24825.controller;
+
+import jakarta.servlet.http.HttpSession;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import s24825.service.FitnessClassService;
+import s24825.service.ReservationService;
+import s24825.service.SessionService;
+
+@Controller
+public class ClassScheduleController {
+
+    private final FitnessClassService fitnessClassService;
+    private final ReservationService reservationService;
+    private final SessionService sessionService;
+
+    public ClassScheduleController(FitnessClassService fitnessClassService, ReservationService reservationService, SessionService sessionService) {
+        this.fitnessClassService = fitnessClassService;
+        this.reservationService = reservationService;
+        this.sessionService = sessionService;
+    }
+
+    @GetMapping({"/", "/class-schedule"})
+    public String showClassSchedule(Model model) {
+        // Ta strona jest publiczna, więc nie sprawdzamy sesji
+        model.addAttribute("classes", fitnessClassService.getAllClassesWithDetails());
+        return "class-schedule";
+    }
+
+    @PostMapping("/reservations")
+    public String makeReservation(@RequestParam("classId") Long classId, HttpSession session, RedirectAttributes redirectAttributes) {
+        // Zabezpieczenie: tylko zalogowany użytkownik może dokonać rezerwacji
+        Long memberId = sessionService.getLoggedInUserId(session);
+        reservationService.createReservation(memberId, classId);
+        redirectAttributes.addFlashAttribute("successMessage", "Rezerwacja zakończona pomyślnie!");
+        return "redirect:/class-schedule";
+    }
+}
+
+================
+File: src/main/java/s24825/controller/LoginController.java
+================
+package s24825.controller;
+
+import jakarta.servlet.http.HttpSession;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import s24825.model.person.Person;
+import s24825.model.person.Trainer;
+import s24825.service.LoginService;
+import s24825.service.SessionService;
+
+@Controller
+public class LoginController {
+
+    private final LoginService loginService;
+    private final SessionService sessionService;
+
+    public LoginController(LoginService loginService, SessionService sessionService) {
+        this.loginService = loginService;
+        this.sessionService = sessionService;
+    }
+
+    @GetMapping("/login")
+    public String showLoginPage() {
+        return "login";
+    }
+
+    @PostMapping("/login")
+    public String processLogin(@RequestParam String email, @RequestParam String password, HttpSession session) {
+        Person person = loginService.login(email, password);
+        sessionService.loginUser(session, person);
+
+        if (person instanceof Trainer) {
+            return "redirect:/my-trainer-classes";
+        }
+
+        return "redirect:/class-schedule";
+    }
+
+    @GetMapping("/logout")
+    public String logout(HttpSession session) {
+        loginService.logout(session);
+        return "redirect:/login";
+    }
+}
+
+================
+File: src/main/java/s24825/controller/MyReservationsController.java
+================
+package s24825.controller;
+
+import jakarta.servlet.http.HttpSession;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import s24825.model.person.Member;
+import s24825.model.reservation.Reservation;
+import s24825.service.MemberService;
+import s24825.service.ReservationService;
+import s24825.service.SessionService;
+
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+
+@Controller
+public class MyReservationsController {
+
+    private final MemberService memberService;
+    private final SessionService sessionService;
+    private final ReservationService reservationService;
+
+    public MyReservationsController(MemberService memberService, SessionService sessionService, ReservationService reservationService) {
+        this.memberService = memberService;
+        this.sessionService = sessionService;
+        this.reservationService = reservationService;
+    }
+
+    @GetMapping("/my-reservations")
+    public String showMyReservations(Model model, HttpSession session) {
+        // Zabezpieczenie: Sprawdzamy, czy użytkownik jest zalogowany
+        Long memberId = sessionService.getLoggedInUserId(session);
+        Member member = memberService.getMemberWithDetails(memberId);
+
+        List<Reservation> sortedReservations = member.getReservations().stream()
+                .sorted(Comparator.comparing(r -> r.getFitnessClass().getDateTime()))
+                .collect(Collectors.toList());
+
+        model.addAttribute("member", member);
+        model.addAttribute("reservations", sortedReservations);
+        return "my-reservations";
+    }
+
+    @DeleteMapping("/my-reservations/remove/{id}")
+    public String removeReservation(@PathVariable Long id,
+                                    HttpSession session,
+                                    RedirectAttributes redirectAttributes) {
+
+        // Zabezpieczenie: Sprawdzamy, czy użytkownik jest zalogowany
+        Long memberId = sessionService.getLoggedInUserId(session);
+        reservationService.removeReservation(id);
+        redirectAttributes.addFlashAttribute("successMessage", "Rezerwacja została pomyślnie usunięta!");
+        return "redirect:/my-reservations";
+    }
+}
+
+================
+File: src/main/java/s24825/controller/TrainerController.java
+================
+package s24825.controller;
+
+import jakarta.servlet.http.HttpSession;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import s24825.model.classes.FitnessClass;
+import s24825.service.SessionService;
+import s24825.service.TrainerService;
+import java.util.List;
+
+@Controller
+public class TrainerController {
+
+    private final TrainerService trainerService;
+    private final SessionService sessionService;
+
+    public TrainerController(TrainerService trainerService, SessionService sessionService) {
+        this.trainerService = trainerService;
+        this.sessionService = sessionService;
+    }
+
+    @GetMapping("/my-trainer-classes")
+    public String showTrainerClasses(Model model, HttpSession session) {
+        // Zabezpieczenie: Sprawdzamy, czy użytkownik jest zalogowany
+        Long trainerId = sessionService.getLoggedInUserId(session);
+        List<FitnessClass> classes = trainerService.getClassesForTrainer(trainerId);
+        model.addAttribute("classes", classes);
+        return "trainer-classes";
+    }
+
+    @GetMapping("/my-trainer-classes/{id}")
+    public String showClassDetails(@PathVariable("id") Long classId, Model model, HttpSession session) {
+        // Zabezpieczenie: Sprawdzamy, czy użytkownik jest zalogowany
+        Long trainerId = sessionService.getLoggedInUserId(session);
+        FitnessClass fitnessClass = trainerService.getClassDetailsForTrainer(classId, trainerId);
+        model.addAttribute("fitnessClass", fitnessClass);
+        return "trainer-class-details";
+    }
+}
+
+================
+File: src/main/java/s24825/exception/GlobalExceptionHandler.java
+================
+package s24825.exception;
+
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+@ControllerAdvice
+public class GlobalExceptionHandler {
+
+    @ExceptionHandler(ReservationException.class)
+    public String handleReservationException(ReservationException ex, RedirectAttributes redirectAttributes) {
+        redirectAttributes.addFlashAttribute("errorMessage", ex.getMessage());
+        return "redirect:/class-schedule";
+    }
+
+    @ExceptionHandler(InvalidCredentialsException.class)
+    public String handleInvalidCredentialsException(InvalidCredentialsException ex, RedirectAttributes redirectAttributes) {
+        redirectAttributes.addFlashAttribute("error", ex.getMessage());
+        return "redirect:/login";
+    }
+
+    @ExceptionHandler(SessionExpiredException.class)
+    public String handleSessionExpiredException(SessionExpiredException ex, RedirectAttributes redirectAttributes) {
+        redirectAttributes.addFlashAttribute("error", ex.getMessage());
+        return "redirect:/login";
+    }
+
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public String handleResourceNotFoundException(ResourceNotFoundException ex, RedirectAttributes redirectAttributes) {
+        redirectAttributes.addFlashAttribute("errorMessage", ex.getMessage());
+        return "redirect:/class-schedule";
+    }
+}
+
+================
+File: src/main/java/s24825/exception/InvalidCredentialsException.java
+================
+package s24825.exception;
+
+public class InvalidCredentialsException extends RuntimeException {
+    public InvalidCredentialsException(String message) {
+        super(message);
+    }
+}
+
+================
+File: src/main/java/s24825/exception/ReservationException.java
+================
+package s24825.exception;
+
+public class ReservationException extends RuntimeException {
+    public ReservationException(String message) {
+        super(message);
+    }
+}
+
+================
+File: src/main/java/s24825/exception/ResourceNotFoundException.java
+================
+package s24825.exception;
+
+public class ResourceNotFoundException extends RuntimeException {
+    public ResourceNotFoundException(String message) {
+        super(message);
+    }
+}
+
+================
+File: src/main/java/s24825/exception/SessionExpiredException.java
+================
+package s24825.exception;
+
+public class SessionExpiredException extends RuntimeException {
+    public SessionExpiredException(String message) {
+        super(message);
+    }
+}
+
+================
+File: src/main/java/s24825/FitflowApplication.java
+================
+package s24825;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+
+@SpringBootApplication
+public class FitflowApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(FitflowApplication.class, args);
+    }
+
+}
+
+================
+File: src/main/java/s24825/model/classes/FitnessClass.java
+================
+package s24825.model.classes;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import s24825.model.reservation.Reservation;
+import s24825.model.reservation.ReservationStatus;
+import s24825.model.other.TrainingRoom;
+import s24825.model.person.Trainer;
+
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+
+@Entity
+@Table(name = "fitness_classes")
+@Inheritance(strategy = InheritanceType.JOINED)
+@Getter
+@Setter
+@NoArgsConstructor
+@NamedEntityGraph(
+        name = "FitnessClass.withDetails",
+        attributeNodes = {
+                @NamedAttributeNode("reservations"),
+                @NamedAttributeNode("trainer"),
+                @NamedAttributeNode("trainingRoom")
+        }
+)
+public abstract class FitnessClass {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+    private String description;
+    private LocalDateTime dateTime;
+    private int durationInMinutes;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "trainer_id")
+    private Trainer trainer;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "training_room_id")
+    private TrainingRoom trainingRoom;
+
+    @OneToMany(mappedBy = "fitnessClass", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<Reservation> reservations = new HashSet<>();
+
+    public abstract int getCapacity();
+
+    public int getNumberOfReservations() {
+        return (int) reservations.stream()
+                .filter(r -> r.getStatus() == ReservationStatus.CONFIRMED)
+                .count();
+    }
+}
+
+================
+File: src/main/java/s24825/model/classes/GroupClass.java
+================
+package s24825.model.classes;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Table(name = "group_classes")
+@Getter
+@Setter
+@NoArgsConstructor
+public class GroupClass extends FitnessClass {
+
+    private int participantLimit;
+
+    @Override
+    public int getCapacity() {
+        return getParticipantLimit();
+    }
+}
+
+================
+File: src/main/java/s24825/model/membership/Membership.java
+================
+package s24825.model.membership;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import s24825.model.membership.state.ExpiredState;
+import s24825.model.membership.state.MembershipState;
+import s24825.model.membership.state.PremiumState;
+import s24825.model.membership.state.StandardState;
+import s24825.model.person.Member;
+
+import java.time.LocalDate;
+
+@Entity
+@Table(name = "memberships")
+@Getter
+@Setter
+@NoArgsConstructor
+public class Membership {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private LocalDate purchaseDate;
+    private LocalDate expirationDate;
+    private String membershipType;
+    private int entriesUsed;
+
+    @Transient
+    private MembershipState currentState;
+
+    @ManyToOne
+    @JoinColumn(name = "member_id", nullable = false)
+    private Member member;
+
+
+
+    public boolean canBook() {
+        if (this.currentState == null) {
+            initializeState();
+        }
+        return this.currentState.canBook(this);
+    }
+
+    public void handleBooking() {
+        if (this.currentState == null) {
+            initializeState();
+        }
+        this.currentState.handleBooking(this);
+    }
+
+    public String getTypeName() {
+        if (this.currentState == null) {
+            initializeState();
+        }
+        return this.currentState.getTypeName();
+    }
+
+
+    @PostLoad
+    public void initializeState() {
+        if (!isActive()) {
+            this.currentState = new ExpiredState();
+            return;
+        }
+
+        if ("PREMIUM".equalsIgnoreCase(this.membershipType)) {
+            this.currentState = new PremiumState();
+        } else {
+            this.currentState = new StandardState();
+        }
+    }
+
+
+    public void upgradeToPremium() {
+        this.setMembershipType("PREMIUM");
+        this.setEntriesUsed(0);
+        this.initializeState();
+    }
+
+    public boolean isActive() {
+        return getExpirationDate() != null && !LocalDate.now().isAfter(getExpirationDate());
+    }
+}
+
+================
+File: src/main/java/s24825/model/membership/state/ExpiredState.java
+================
+package s24825.model.membership.state;
+
+import s24825.model.membership.Membership;
+
+public class ExpiredState implements MembershipState {
+
+    @Override
+    public boolean canBook(Membership context) {
+        return false;
+    }
+
+    @Override
+    public String getTypeName() {
+        return "Expired";
+    }
+
+    @Override
+    public void handleBooking(Membership context) {
+    }
+}
+
+================
+File: src/main/java/s24825/model/membership/state/MembershipState.java
+================
+package s24825.model.membership.state;
+
+import s24825.model.membership.Membership;
+
+/**
+ * Interface representing the state of a Membership, according to the State design pattern.
+ * It allows a membership's behavior to change when its state changes.
+ */
+public interface MembershipState {
+
+
+    boolean canBook(Membership context);
+
+    String getTypeName();
+
+    void handleBooking(Membership context);
+}
+
+================
+File: src/main/java/s24825/model/membership/state/PremiumState.java
+================
+package s24825.model.membership.state;
+
+import s24825.model.membership.Membership;
+
+public class PremiumState implements MembershipState {
+
+    @Override
+    public boolean canBook(Membership context) {
+        return context.isActive();
+    }
+
+    @Override
+    public String getTypeName() {
+        return "Premium";
+    }
+
+    @Override
+    public void handleBooking(Membership context) {
+        // No usage to track for premium, so this method does nothing.
+    }
+}
+
+================
+File: src/main/java/s24825/model/membership/state/StandardState.java
+================
+package s24825.model.membership.state;
+
+import s24825.model.membership.Membership;
+
+public class StandardState implements MembershipState {
+
+    private static final int STANDARD_ENTRY_LIMIT = 20;
+
+    @Override
+    public boolean canBook(Membership context) {
+        // A standard membership is valid if it's active and the entry limit has not been reached.
+        return context.isActive() && context.getEntriesUsed() < STANDARD_ENTRY_LIMIT;
+    }
+
+    @Override
+    public String getTypeName() {
+        return "Standard";
+    }
+
+    @Override
+    public void handleBooking(Membership context) {
+        if (canBook(context)) {
+            context.setEntriesUsed(context.getEntriesUsed() + 1);
+        }
+    }
+}
+
+================
+File: src/main/java/s24825/model/other/Address.java
+================
+package s24825.model.other;
+
+import jakarta.annotation.Nullable;
+import jakarta.persistence.Embeddable;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Embeddable
+@Getter
+@Setter
+@NoArgsConstructor
+public class Address {
+
+    @NotBlank(message = "Street is required")
+    @Size(min = 2, max = 255, message = "Street must be between 2 and 255 characters")
+    private String street;
+
+    @NotBlank(message = "House number is required")
+    @Size(min = 1, max = 10, message = "House number must be between 1 and 10 characters")
+    private String houseNumber;
+
+    @Size(max = 10, message = "Apartment number must be up to 10 characters")
+    @Nullable
+    private String apartmentNumber;
+
+    @NotBlank(message = "City is required")
+    @Size(min = 2, max = 255, message = "City must be between 2 and 255 characters")
+    private String city;
+
+    @NotBlank(message = "Postal code is required")
+    @Size(min = 5, max = 10, message = "Postal code must be between 5 and 10 characters")
+    private String postalCode;
+
+}
+
+================
+File: src/main/java/s24825/model/other/Equipment.java
+================
+package s24825.model.other;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Table(name = "equipment")
+@Getter
+@Setter
+@NoArgsConstructor
+public class Equipment {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @NotBlank(message = "Name is required")
+    @Column(nullable = false, length = 255)
+    private String name;
+
+    @NotBlank(message = "Type is required")
+    @Column(nullable = false, length = 100)
+    private String type;
+
+    @Column(unique = true, nullable = false)
+    private String serialNumber;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "training_room_id")
+    private TrainingRoom trainingRoom;
+
+}
+
+================
+File: src/main/java/s24825/model/other/TrainingRoom.java
+================
+package s24825.model.other;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.HashMap;
+import java.util.Map;
+
+
+@Entity
+@Table(name = "training_rooms")
+@Getter
+@Setter
+@NoArgsConstructor
+public class TrainingRoom {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(unique = true, nullable = false)
+    private String number;
+
+    private String name;
+    private int capacity;
+
+    @OneToMany(mappedBy = "trainingRoom", cascade = CascadeType.ALL, orphanRemoval = true)
+    @MapKey(name = "serialNumber")
+    private Map<String, Equipment> equipment = new HashMap<>();
+}
+
+================
+File: src/main/java/s24825/model/person/Member.java
+================
+package s24825.model.person;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import s24825.model.membership.Membership;
+import s24825.model.reservation.Reservation;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+@Entity
+@Table(name = "members")
+@Getter
+@Setter
+@NoArgsConstructor
+public class Member extends Person {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(unique = true, nullable = false)
+    private String memberNumber;
+
+    private LocalDate registrationDate;
+    private boolean active;
+
+    @OneToMany(mappedBy = "member", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<Membership> memberships = new HashSet<>();
+
+
+    @OneToMany(mappedBy = "member", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<Reservation> reservations = new HashSet<>();
+
+    public void addPass(Membership membership) {
+        memberships.add(membership);
+        membership.setMember(this);
+    }
+}
+
+================
+File: src/main/java/s24825/model/person/Person.java
+================
+package s24825.model.person;
+
+import jakarta.persistence.Embedded;
+import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.Transient;
+import jakarta.validation.constraints.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import s24825.model.other.Address;
+
+import java.time.LocalDate;
+
+@MappedSuperclass
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+
+public abstract class Person {
+
+    @NotBlank(message = "First name is required")
+    @Size(min = 2, max = 255, message = "First name must be between 2 and 255 characters")
+    private String firstName;
+
+    @NotBlank(message = "Last name is required")
+    @Size(min = 2, max = 255, message = "Last name must be between 2 and 255 characters")
+    private String lastName;
+
+    @NotNull(message = "Date of birth is required")
+    private LocalDate dateOfBirth;
+
+    @NotBlank(message = "Phone number is required")
+    @Size(min = 9, max = 15, message = "Phone number must be between 9 and 15 characters")
+    @Pattern(regexp = "^\\+?[0-9]{9,15}$", message = "Phone number is not valid")
+    private String phone;
+
+    @NotBlank(message = "Email is required")
+    @Size(min = 5, max = 255, message = "Email must be between 5 and 255 characters")
+    @Email(message = "Email is not valid")
+    private String email;
+
+    @NotBlank(message = "Password is required")
+    @Size(min = 8, max = 255, message = "Password must be between 8 and 255 characters")
+    private String password;
+
+    @Embedded
+    private Address address;
+
+    @Transient
+    public int getAge() {
+        return LocalDate.now().getYear() - dateOfBirth.getYear();
+    }
+
+    public abstract Long getId();
+
+
+}
+
+================
+File: src/main/java/s24825/model/person/Trainer.java
+================
+package s24825.model.person;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Represents a trainer at the fitness club.
+ */
+@Entity
+@Table(name = "trainers")
+@Getter
+@Setter
+@NoArgsConstructor
+public class Trainer extends Person {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(unique = true, nullable = false)
+    private String licenseNumber;
+
+    @ElementCollection
+    @CollectionTable(name = "trainer_specializations", joinColumns = @JoinColumn(name = "trainer_id"))
+    @Column(name = "specialization", nullable = false)
+    private List<String> specializations = new ArrayList<>();
+}
+
+================
+File: src/main/java/s24825/model/reservation/Reservation.java
+================
+package s24825.model.reservation;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import s24825.model.classes.FitnessClass;
+import s24825.model.person.Member;
+
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "reservations")
+@Getter
+@Setter
+@NoArgsConstructor
+public class Reservation {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private LocalDateTime reservationDate;
+
+    @Enumerated(EnumType.STRING)
+    private ReservationStatus status;
+
+    @ManyToOne
+    @JoinColumn(name = "member_id", nullable = false)
+    private Member member;
+
+    @ManyToOne
+    @JoinColumn(name = "fitness_class_id", nullable = false)
+    private FitnessClass fitnessClass;
+
+    public Reservation(Member member, FitnessClass fitnessClass) {
+        this.member = member;
+        this.fitnessClass = fitnessClass;
+        this.reservationDate = LocalDateTime.now();
+        this.status = ReservationStatus.CONFIRMED;
+    }
+}
+
+================
+File: src/main/java/s24825/model/reservation/ReservationStatus.java
+================
+package s24825.model.reservation;
+
+public enum ReservationStatus {
+    CONFIRMED,
+    CANCELLED,
+    WAITING_LIST
+}
+
+================
+File: src/main/java/s24825/repository/EquipmentRepository.java
+================
+package s24825.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import s24825.model.other.Equipment;
+
+@Repository
+public interface EquipmentRepository extends JpaRepository<Equipment, Long> {
+}
+
+================
+File: src/main/java/s24825/repository/FitnessClassRepository.java
+================
+package s24825.repository;
+
+import jakarta.persistence.QueryHint;
+import org.springframework.data.jpa.repository.EntityGraph;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.jpa.repository.QueryHints;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+import s24825.model.classes.FitnessClass;
+
+import java.util.List;
+import java.util.Optional;
+
+@Repository
+public interface FitnessClassRepository extends JpaRepository<FitnessClass, Long> {
+
+    @Query("SELECT fc FROM FitnessClass fc")
+    @EntityGraph(value = "FitnessClass.withDetails")
+    @QueryHints({ @QueryHint(name = "org.hibernate.comment", value = "[FitnessClassRepo] Find all classes with details (graph)") })
+    List<FitnessClass> findAllWithDetails();
+
+    // Nowa metoda do pobierania zajęć dla konkretnego trenera
+    @Query("SELECT fc FROM FitnessClass fc WHERE fc.trainer.id = :trainerId ORDER BY fc.dateTime")
+    @EntityGraph(value = "FitnessClass.withDetails")
+    @QueryHints({ @QueryHint(name = "org.hibernate.comment", value = "[FitnessClassRepo] Find all classes for a specific trainer") })
+    List<FitnessClass> findByTrainerIdWithDetails(@Param("trainerId") Long trainerId);
+
+    // Nowa metoda do pobierania szczegółów jednych zajęć dla trenera (zabezpieczenie)
+    @Query("SELECT fc FROM FitnessClass fc WHERE fc.id = :classId AND fc.trainer.id = :trainerId")
+    @EntityGraph(attributePaths = {"reservations.member"}) // Dociągamy rezerwacje i ich członków
+    @QueryHints({ @QueryHint(name = "org.hibernate.comment", value = "[FitnessClassRepo] Find specific class details for a trainer") })
+    Optional<FitnessClass> findByIdAndTrainerIdWithParticipants(@Param("classId") Long classId, @Param("trainerId") Long trainerId);
+}
+
+================
+File: src/main/java/s24825/repository/MemberRepository.java
+================
+package s24825.repository;
+
+
+import jakarta.persistence.QueryHint;
+import org.springframework.data.jpa.repository.EntityGraph;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.jpa.repository.QueryHints;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+import s24825.model.person.Member;
+
+import java.util.Optional;
+
+@Repository
+public interface MemberRepository extends JpaRepository<Member, Long> {
+
+    Optional<Member> findById(Long id);
+
+    @QueryHints({ @QueryHint(name = "org.hibernate.comment", value = "[MemberRepo] Find Member with all details for MyReservations page") })
+    @Query("SELECT DISTINCT m FROM Member m " +
+            "LEFT JOIN FETCH m.memberships " +
+            "LEFT JOIN FETCH m.reservations r " +
+            "LEFT JOIN FETCH r.fitnessClass fc " +
+            "LEFT JOIN FETCH fc.trainer " +
+            "LEFT JOIN FETCH fc.trainingRoom " +
+            "WHERE m.id = :id")
+    Optional<Member> findByIdWithDetails(@Param("id") Long id);
+
+    @QueryHints({ @QueryHint(name = "org.hibernate.comment", value = "[MemberRepo] Find Member with Memberships for Reservation check") })
+    @Query("SELECT DISTINCT m FROM Member m LEFT JOIN FETCH m.memberships WHERE m.id = :id")
+    Optional<Member> findByIdWithMemberships(@Param("id") Long id);
+
+    @QueryHints({ @QueryHint(name = "org.hibernate.comment", value = "[MemberRepo] Find Member by Email for Login") })
+    Optional<Member> findByEmail(String email);
+}
+
+================
+File: src/main/java/s24825/repository/ReservationRepository.java
+================
+package s24825.repository;
+
+import jakarta.persistence.QueryHint;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.QueryHints;
+import org.springframework.stereotype.Repository;
+import s24825.model.reservation.Reservation;
+
+import java.util.Optional;
+
+@Repository
+public interface ReservationRepository extends JpaRepository<Reservation, Long> {
+
+    @QueryHints({ @QueryHint(name = "org.hibernate.comment", value = "[ReservationRepo] Check if a reservation exists for member and class") })
+    boolean existsByMemberIdAndFitnessClassId(Long fitnessClassId, Long memberId);
+
+
+
+}
+
+================
+File: src/main/java/s24825/repository/TrainerRepository.java
+================
+package s24825.repository;
+
+import jakarta.persistence.QueryHint;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.QueryHints;
+import org.springframework.stereotype.Repository;
+import s24825.model.person.Trainer;
+
+import java.util.Optional;
+
+@Repository
+public interface TrainerRepository extends JpaRepository<Trainer, Long> {
+
+    @QueryHints({ @QueryHint(name = "org.hibernate.comment", value = "[TrainerRepo] Find trainer by email") })
+    Optional<Trainer> findByEmail(String email);
+}
+
+================
+File: src/main/java/s24825/repository/TrainingRoomRepository.java
+================
+package s24825.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import s24825.model.other.TrainingRoom;
+
+@Repository
+public interface TrainingRoomRepository extends JpaRepository<TrainingRoom, Long> {
+}
+
+================
+File: src/main/java/s24825/service/auth/MemberFinder.java
+================
+package s24825.service.auth;
+
+import org.springframework.stereotype.Component;
+import s24825.model.person.Person;
+import s24825.repository.MemberRepository;
+import java.util.Optional;
+
+@Component
+public class MemberFinder implements UserFinder {
+
+    private final MemberRepository memberRepository;
+
+    public MemberFinder(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
+
+    @Override
+    public Optional<Person> findByEmail(String email) {
+        return memberRepository.findByEmail(email).map(person -> person);
+    }
+}
+
+================
+File: src/main/java/s24825/service/auth/TrainerFinder.java
+================
+package s24825.service.auth;
+
+import org.springframework.stereotype.Component;
+import s24825.model.person.Person;
+import s24825.repository.TrainerRepository;
+import java.util.Optional;
+
+@Component
+public class TrainerFinder implements UserFinder {
+    private final TrainerRepository trainerRepository;
+
+    public TrainerFinder(TrainerRepository trainerRepository) {
+        this.trainerRepository = trainerRepository;
+    }
+
+    @Override
+    public Optional<Person> findByEmail(String email) {
+        return trainerRepository.findByEmail(email).map(person -> person);
+    }
+}
+
+================
+File: src/main/java/s24825/service/auth/UserFinder.java
+================
+package s24825.service.auth;
+
+import s24825.model.person.Person;
+import java.util.Optional;
+
+/**
+ * Interfejs strategii do wyszukiwania różnych typów użytkowników.
+ * Każda implementacja będzie odpowiedzialna za przeszukanie jednego repozytorium.
+ */
+public interface UserFinder {
+    Optional<Person> findByEmail(String email);
+}
+
+================
+File: src/main/java/s24825/service/DataInitializerService.java
+================
+package s24825.service;
+
+import jakarta.annotation.PostConstruct;
+import org.springframework.stereotype.Service;
+import s24825.model.classes.GroupClass;
+import s24825.model.membership.Membership;
+import s24825.model.other.Address;
+import s24825.model.other.TrainingRoom;
+import s24825.model.person.Member;
+import s24825.model.person.Trainer;
+import s24825.model.reservation.Reservation;
+import s24825.repository.*;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Arrays;
+
+/**
+ * Service to initialize the database with sample data for demonstration purposes.
+ */
+@Service
+public class DataInitializerService {
+
+    private final MemberRepository memberRepository;
+    private final TrainerRepository trainerRepository;
+    private final TrainingRoomRepository trainingRoomRepository;
+    private final FitnessClassRepository fitnessClassRepository;
+    private final ReservationRepository reservationRepository; // <-- DODANE REPOZYTORIUM
+
+    public DataInitializerService(MemberRepository memberRepository, TrainerRepository trainerRepository,
+                                  TrainingRoomRepository trainingRoomRepository, FitnessClassRepository fitnessClassRepository,
+                                  ReservationRepository reservationRepository) { // <-- DODANY PARAMETR
+        this.memberRepository = memberRepository;
+        this.trainerRepository = trainerRepository;
+        this.trainingRoomRepository = trainingRoomRepository;
+        this.fitnessClassRepository = fitnessClassRepository;
+        this.reservationRepository = reservationRepository; // <-- DODANE PRZYPISANIE
+    }
+
+    @PostConstruct
+    @org.springframework.transaction.annotation.Transactional
+    public void initData() {
+
+        // 1. CREATE TRAINING ROOMS
+        TrainingRoom roomA = new TrainingRoom();
+        roomA.setName("Sala A (Siłownia)");
+        roomA.setNumber("A1");
+        roomA.setCapacity(20);
+        trainingRoomRepository.save(roomA);
+
+        TrainingRoom roomB = new TrainingRoom();
+        roomB.setName("Sala B (Fitness)");
+        roomB.setNumber("B2");
+        roomB.setCapacity(25);
+        trainingRoomRepository.save(roomB);
+
+        TrainingRoom roomC = new TrainingRoom();
+        roomC.setName("Sala C (Cardio)");
+        roomC.setNumber("C3");
+        roomC.setCapacity(30);
+        trainingRoomRepository.save(roomC);
+
+        // 2. CREATE TRAINERS
+        Trainer trainer1 = new Trainer();
+        trainer1.setFirstName("Anna");
+        trainer1.setLastName("Nowak");
+        trainer1.setEmail("anna.nowak@fitflow.com");
+        trainer1.setPassword("password123");
+        trainer1.setDateOfBirth(LocalDate.of(1990, 5, 15));
+        trainer1.setPhone("123456789");
+        trainer1.setLicenseNumber("T-123456");
+        Address address1 = new Address();
+        address1.setStreet("Słoneczna");
+        address1.setHouseNumber("10");
+        address1.setCity("Warszawa");
+        address1.setPostalCode("01-234");
+        trainer1.setAddress(address1);
+        trainer1.setSpecializations(Arrays.asList("Joga", "Pilates", "Zdrowy kręgosłup"));
+        trainerRepository.save(trainer1);
+
+        Trainer trainer2 = new Trainer();
+        trainer2.setFirstName("Piotr");
+        trainer2.setLastName("Wiśniewski");
+        trainer2.setEmail("piotr.wisniewski@fitflow.com");
+        trainer2.setPassword("password123");
+        trainer2.setDateOfBirth(LocalDate.of(1985, 10, 20));
+        trainer2.setPhone("987654321");
+        trainer2.setLicenseNumber("T-654321");
+        Address address2 = new Address();
+        address2.setStreet("Księżycowa");
+        address2.setHouseNumber("5A");
+        address2.setApartmentNumber("12");
+        address2.setCity("Kraków");
+        address2.setPostalCode("30-002");
+        trainer2.setAddress(address2);
+        trainer2.setSpecializations(Arrays.asList("Crossfit", "Trening siłowy"));
+        trainerRepository.save(trainer2);
+
+        // 3. CREATE MEMBERS AND MEMBERSHIPS
+
+        // Member 1: Standard Active Pass
+        Member member1 = new Member();
+        member1.setFirstName("Jan");
+        member1.setLastName("Kowalski");
+        member1.setMemberNumber("M001");
+        member1.setEmail("jan.kowalski@example.com");
+        member1.setPassword("password123");
+        member1.setDateOfBirth(LocalDate.of(1995, 3, 25));
+        member1.setPhone("555666777");
+        member1.setRegistrationDate(LocalDate.now().minusMonths(6));
+        Address memberAddress1 = new Address();
+        memberAddress1.setStreet("Główna");
+        memberAddress1.setHouseNumber("1");
+        memberAddress1.setCity("Warszawa");
+        memberAddress1.setPostalCode("02-456");
+        member1.setAddress(memberAddress1);
+
+        Membership pass1 = new Membership();
+        pass1.setMembershipType("STANDARD");
+        pass1.setPurchaseDate(LocalDate.now());
+        pass1.setExpirationDate(LocalDate.now().plusMonths(1));
+        pass1.setEntriesUsed(0);
+        member1.addPass(pass1);
+        memberRepository.save(member1);
+
+        // Member 2: Premium Active Pass
+        Member member2 = new Member();
+        member2.setFirstName("Anna");
+        member2.setLastName("Zielińska");
+        member2.setMemberNumber("M002");
+        member2.setEmail("anna.zielinska@example.com");
+        member2.setPassword("password123");
+        member2.setDateOfBirth(LocalDate.of(1998, 8, 20));
+        member2.setPhone("222333444");
+        Address memberAddress2 = new Address();
+        memberAddress2.setStreet("Polna");
+        memberAddress2.setHouseNumber("2");
+        memberAddress2.setCity("Gdańsk");
+        memberAddress2.setPostalCode("80-123");
+        member2.setAddress(memberAddress2);
+
+        Membership pass2 = new Membership();
+        pass2.setMembershipType("PREMIUM");
+        pass2.setPurchaseDate(LocalDate.now().minusDays(10));
+        pass2.setExpirationDate(LocalDate.now().plusMonths(2));
+        member2.addPass(pass2);
+        memberRepository.save(member2);
+
+        // Member 3: Standard Expired Pass
+        Member member3 = new Member();
+        member3.setFirstName("Tomasz");
+        member3.setLastName("Wójcik");
+        member3.setMemberNumber("M003");
+        member3.setEmail("tomasz.wojcik@example.com");
+        member3.setPassword("password123");
+        member3.setDateOfBirth(LocalDate.of(1991, 1, 1));
+        member3.setPhone("333444555");
+        Address memberAddress3 = new Address();
+        memberAddress3.setStreet("Krótka");
+        memberAddress3.setHouseNumber("3");
+        memberAddress3.setCity("Poznań");
+        memberAddress3.setPostalCode("60-456");
+        member3.setAddress(memberAddress3);
+
+        Membership pass3 = new Membership();
+        pass3.setMembershipType("STANDARD");
+        pass3.setPurchaseDate(LocalDate.now().minusMonths(2));
+        pass3.setExpirationDate(LocalDate.now().minusMonths(1)); // Expired last month
+        pass3.setEntriesUsed(5);
+        member3.addPass(pass3);
+        memberRepository.save(member3);
+
+        // 4. CREATE FITNESS CLASSES
+        GroupClass yogaClass = new GroupClass();
+        yogaClass.setName("Poranna Joga");
+        yogaClass.setDescription("Odświeżająca sesja jogi na dobry początek dnia.");
+        yogaClass.setDateTime(LocalDateTime.now().plusDays(2).withHour(8).withMinute(0));
+        yogaClass.setDurationInMinutes(60);
+        yogaClass.setTrainer(trainer1);
+        yogaClass.setTrainingRoom(roomB);
+        yogaClass.setParticipantLimit(15);
+        fitnessClassRepository.save(yogaClass);
+
+        GroupClass crossfitClass = new GroupClass();
+        crossfitClass.setName("Crossfit");
+        crossfitClass.setDescription("Intensywny trening funkcjonalny.");
+        crossfitClass.setDateTime(LocalDateTime.now().plusDays(2).withHour(18).withMinute(0));
+        crossfitClass.setDurationInMinutes(50);
+        crossfitClass.setTrainer(trainer2);
+        crossfitClass.setTrainingRoom(roomA);
+        crossfitClass.setParticipantLimit(10);
+        fitnessClassRepository.save(crossfitClass);
+
+        GroupClass pilatesClass = new GroupClass();
+        pilatesClass.setName("Pilates dla każdego");
+        pilatesClass.setDescription("Wzmacniający pilates dla każdego.");
+        pilatesClass.setDateTime(LocalDateTime.now().plusDays(3).withHour(17).withMinute(0));
+        pilatesClass.setDurationInMinutes(55);
+        pilatesClass.setTrainer(trainer1);
+        pilatesClass.setTrainingRoom(roomB);
+        pilatesClass.setParticipantLimit(2); // Low limit to test full class scenario
+        fitnessClassRepository.save(pilatesClass);
+
+        GroupClass hiitClass = new GroupClass();
+        hiitClass.setName("HIIT");
+        hiitClass.setDescription("Trening interwałowy o wysokiej intensywności.");
+        hiitClass.setDateTime(LocalDateTime.now().plusDays(4).withHour(19).withMinute(0));
+        hiitClass.setDurationInMinutes(45);
+        hiitClass.setTrainer(trainer2);
+        hiitClass.setTrainingRoom(roomC);
+        hiitClass.setParticipantLimit(20);
+        fitnessClassRepository.save(hiitClass);
+
+
+        // 5. CREATE RESERVATIONS TO POPULATE THE SYSTEM
+
+        // Member 1 reserves Yoga. His pass usage should increment.
+        Reservation res1 = new Reservation(member1, yogaClass);
+        reservationRepository.save(res1);
+        pass1.handleBooking(); // Update entriesUsed for the standard pass
+        memberRepository.save(member1); // Save the updated state of the member/pass
+
+        // Member 2 reserves Crossfit.
+        Reservation res2 = new Reservation(member2, crossfitClass);
+        reservationRepository.save(res2);
+        pass2.handleBooking(); // For premium pass, this does nothing, which is correct
+        memberRepository.save(member2);
+
+        // Member 1 and 2 reserve the Pilates class to make it full
+        Reservation res3 = new Reservation(member1, pilatesClass);
+        reservationRepository.save(res3);
+        pass1.handleBooking();
+        memberRepository.save(member1);
+
+        Reservation res4 = new Reservation(member2, pilatesClass);
+        reservationRepository.save(res4);
+        pass2.handleBooking();
+        memberRepository.save(member2);
+
+        // We do not create a reservation for member3, as his pass is expired.
+        // This allows testing the scenario where a user cannot book a class.
+    }
+}
+
+================
+File: src/main/java/s24825/service/FitnessClassService.java
+================
+package s24825.service;
+
+import org.springframework.stereotype.Service;
+import s24825.model.classes.FitnessClass;
+import s24825.repository.FitnessClassRepository;
+import java.util.List;
+
+@Service
+public class FitnessClassService {
+
+    private final FitnessClassRepository fitnessClassRepository;
+
+    public FitnessClassService(FitnessClassRepository fitnessClassRepository) {
+        this.fitnessClassRepository = fitnessClassRepository;
+    }
+
+    public List<FitnessClass> getAllClassesWithDetails() {
+        return fitnessClassRepository.findAllWithDetails();
+    }
+}
+
+================
+File: src/main/java/s24825/service/LoginService.java
+================
+package s24825.service;
+
+import jakarta.servlet.http.HttpSession;
+import org.springframework.stereotype.Service;
+import s24825.exception.InvalidCredentialsException;
+import s24825.model.person.Person;
+import s24825.service.auth.UserFinder;
+import java.util.List;
+import java.util.Optional;
+
+
+@Service
+public class LoginService {
+
+
+    private final List<UserFinder> finders;
+
+    public LoginService(List<UserFinder> finders) {
+        this.finders = finders;
+    }
+
+
+    public Person login(String email, String password) {
+
+        return finders.stream()
+                .map(finder -> finder.findByEmail(email)) // Spróbuj znaleźć użytkownika używając każdego "findera"
+                .filter(Optional::isPresent)             // Odsiej puste wyniki
+                .map(Optional::get)                      // Wyciągnij użytkownika z Optional
+                .findFirst()                             // Weź pierwszego znalezionego
+                .filter(person -> person.getPassword().equals(password)) // Sprawdź jego hasło
+                .orElseThrow(() -> new InvalidCredentialsException("Nieprawidłowy e-mail lub hasło.")); // Jeśli go nie ma lub hasło jest złe, rzuć wyjątek
+    }
+
+    public void logout(HttpSession session) {
+        session.invalidate();
+    }
+}
+
+================
+File: src/main/java/s24825/service/MemberService.java
+================
+package s24825.service;
+
+import org.springframework.stereotype.Service;
+import s24825.exception.ResourceNotFoundException;
+import s24825.model.person.Member;
+import s24825.repository.MemberRepository;
+
+@Service
+public class MemberService {
+
+    private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
+
+    public Member getMemberWithDetails(Long memberId) {
+        return memberRepository.findByIdWithDetails(memberId)
+                .orElseThrow(() -> new ResourceNotFoundException("Nie znaleziono danych użytkownika."));
+    }
+}
+
+================
+File: src/main/java/s24825/service/ReservationService.java
+================
+package s24825.service;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import s24825.exception.ReservationException;
+import s24825.exception.ResourceNotFoundException;
+import s24825.model.classes.FitnessClass;
+import s24825.model.membership.Membership;
+import s24825.model.person.Member;
+import s24825.model.reservation.Reservation;
+import s24825.repository.FitnessClassRepository;
+import s24825.repository.MemberRepository;
+import s24825.repository.ReservationRepository;
+
+import java.util.Optional;
+
+@Service
+public class ReservationService {
+
+    private final MemberRepository memberRepository;
+    private final FitnessClassRepository fitnessClassRepository;
+    private final ReservationRepository reservationRepository;
+
+    public ReservationService(MemberRepository memberRepository,
+                              FitnessClassRepository fitnessClassRepository,
+                              ReservationRepository reservationRepository) {
+        this.memberRepository = memberRepository;
+        this.fitnessClassRepository = fitnessClassRepository;
+        this.reservationRepository = reservationRepository;
+    }
+
+    @Transactional
+    public void createReservation(Long memberId, Long fitnessClassId) {
+
+        if (reservationRepository.existsByMemberIdAndFitnessClassId(memberId, fitnessClassId)) {
+            throw new ReservationException("Już posiadasz rezerwację na te zajęcia.");
+        }
+
+        Member member = memberRepository.findByIdWithMemberships(memberId)
+                .orElseThrow(() -> new ResourceNotFoundException("Nie znaleziono członka o ID: " + memberId));
+
+        Optional<Membership> activePass = member.getMemberships().stream()
+                .filter(Membership::isActive)
+                .findFirst();
+
+        if (activePass.isEmpty() || !activePass.get().canBook()) {
+            throw new ReservationException("Członek nie posiada aktywnego karnetu lub wyczerpał limit wejść.");
+        }
+
+        FitnessClass fitnessClass = fitnessClassRepository.findById(fitnessClassId)
+                .orElseThrow(() -> new ResourceNotFoundException("Nie znaleziono zajęć o ID: " + fitnessClassId));
+
+        activePass.get().handleBooking();
+
+        Reservation reservation = new Reservation(member, fitnessClass);
+        reservationRepository.save(reservation);
+    }
+
+    @Transactional
+    public void removeReservation(Long reservationId) {
+        Reservation reservation = reservationRepository.findById(reservationId)
+                .orElseThrow(() -> new ResourceNotFoundException("Nie znaleziono rezerwacji o ID: " + reservationId));
+
+        reservationRepository.delete(reservation);
+
+    }
+}
+
+================
+File: src/main/java/s24825/service/SessionService.java
+================
+package s24825.service;
+
+import jakarta.servlet.http.HttpSession;
+import org.springframework.stereotype.Service;
+import s24825.exception.SessionExpiredException;
+import s24825.model.person.Member;
+import s24825.model.person.Person;
+import s24825.model.person.Trainer;
+
+@Service
+public class SessionService {
+
+    private static final String USER_ID_ATTRIBUTE = "loggedInUserId";
+    private static final String USER_NAME_ATTRIBUTE = "loggedInUserFirstName";
+    private static final String USER_ROLE_ATTRIBUTE = "loggedInUserRole";
+
+    public Long getLoggedInUserId(HttpSession session) {
+        Long userId = (Long) session.getAttribute(USER_ID_ATTRIBUTE);
+        if (userId == null) {
+            throw new SessionExpiredException("Sesja wygasła. Proszę się zalogować ponownie.");
+        }
+        return userId;
+    }
+
+    public String getLoggedInUserRole(HttpSession session) {
+        return (String) session.getAttribute(USER_ROLE_ATTRIBUTE);
+    }
+
+    public void loginUser(HttpSession session, Person person) {
+        session.setAttribute(USER_ID_ATTRIBUTE, person.getId());
+        session.setAttribute(USER_NAME_ATTRIBUTE, person.getFirstName());
+
+        if (person instanceof Member) {
+            session.setAttribute(USER_ROLE_ATTRIBUTE, "MEMBER");
+        } else if (person instanceof Trainer) {
+            session.setAttribute(USER_ROLE_ATTRIBUTE, "TRAINER");
+        }
+    }
+}
+
+================
+File: src/main/java/s24825/service/TrainerService.java
+================
+package s24825.service;
+
+import org.springframework.stereotype.Service;
+import s24825.exception.ResourceNotFoundException;
+import s24825.model.classes.FitnessClass;
+import s24825.repository.FitnessClassRepository;
+import java.util.List;
+
+@Service
+public class TrainerService {
+
+    private final FitnessClassRepository fitnessClassRepository;
+
+    public TrainerService(FitnessClassRepository fitnessClassRepository) {
+        this.fitnessClassRepository = fitnessClassRepository;
+    }
+
+    public List<FitnessClass> getClassesForTrainer(Long trainerId) {
+        return fitnessClassRepository.findByTrainerIdWithDetails(trainerId);
+    }
+
+    public FitnessClass getClassDetailsForTrainer(Long classId, Long trainerId) {
+        return fitnessClassRepository.findByIdAndTrainerIdWithParticipants(classId, trainerId)
+                .orElseThrow(() -> new ResourceNotFoundException("Nie znaleziono zajęć o ID: " + classId + " lub nie jesteś do nich przypisany."));
+    }
+}
+
+================
+File: src/main/resources/application.properties
+================
+# ===============================
+# H2 DATABASE CONFIGURATION
+# ===============================
+# Enable H2 web console
+spring.h2.console.enabled=true
+# Set the path for the H2 console
+spring.h2.console.path=/h2-console
+
+server.port=8082
+
+# ===============================
+# DATASOURCE CONFIGURATION
+# ===============================
+# The URL of the database. H2 in-memory database named 'fitflowdb'.
+spring.datasource.url=jdbc:h2:mem:fitflowdb
+# The username for the database.
+spring.datasource.username=sa
+# The password for the database.
+spring.datasource.password=
+# The driver class name for the H2 database.
+spring.datasource.driverClassName=org.h2.Driver
+
+
+spring.mvc.hiddenmethod.filter.enabled=true
+
+# ===============================
+# JPA (JAVA PERSISTENCE API) CONFIGURATION
+# ===============================
+# Show SQL statements in the console for debugging purposes.
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.use_sql_comments=true
+spring.jpa.properties.hibernate.format_sql=true
+
+# Let Hibernate generate the database schema on startup. 'create-drop' is great for development.
+spring.jpa.hibernate.ddl-auto=create-drop
+# Specifies the H2 dialect for Hibernate.
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
+================
+File: src/main/resources/templates/class-schedule.html
+================
+<!DOCTYPE html>
+    <html lang="pl" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Grafik Zajęć - FitFlow</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+
+    <div th:replace="~{fragments :: navbar}"></div>
+
+    <div class="container mt-4">
+        <h2>Grafik Zajęć</h2>
+        <p>Przeglądaj dostępne zajęcia i zarezerwuj swoje miejsce.</p>
+
+        <!-- Success Message -->
+        <div th:if="${successMessage}" class="alert alert-success" role="alert" th:text="${successMessage}"></div>
+
+        <!-- Error Message -->
+        <div th:if="${errorMessage}" class="alert alert-danger" role="alert" th:text="${errorMessage}"></div>
+
+
+        <div class="list-group">
+            <div th:each="class : ${classes}" class="list-group-item list-group-item-action flex-column align-items-start mb-3 border rounded">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1" th:text="${class.name}">Nazwa zajęć</h5>
+                    <small th:text="${#temporals.format(class.dateTime, 'dd.MM.yyyy HH:mm')}">Data</small>
+                </div>
+                <p class="mb-1" th:text="${class.description}">Opis zajęć.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <small th:text="'Trener: ' + ${class.trainer.firstName} + ' ' + ${class.trainer.lastName}">Imię trenera</small><br>
+                        <small th:text="'Sala: ' + ${class.trainingRoom.name}">Sala</small>
+                    </div>
+                    <div>
+                        <span th:text="'Wolne miejsca: ' + (${class.capacity} - ${class.numberOfReservations})" class="badge bg-primary rounded-pill me-3"></span>
+                        <form th:action="@{/reservations}" method="post" class="d-inline">
+                            <input type="hidden" name="classId" th:value="${class.id}" />
+                            <input type="hidden" name="memberId" th:value="${memberId}" />
+                            <button type="submit" class="btn btn-success" th:disabled="${(class.capacity - class.numberOfReservations) <= 0}">
+                                Zarezerwuj
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>
+
+================
+File: src/main/resources/templates/fragments.html
+================
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" th:fragment="navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" th:href="@{/class-schedule}">FitFlow</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/class-schedule}">Główny Grafik</a>
+                </li>
+                <!-- Link widoczny tylko dla członków -->
+                <li class="nav-item" th:if="${session.loggedInUserRole == 'MEMBER'}">
+                    <a class="nav-link" th:href="@{/my-reservations}">Moje Rezerwacje</a>
+                </li>
+                <!-- Link widoczny tylko dla trenerów -->
+                <li class="nav-item" th:if="${session.loggedInUserRole == 'TRAINER'}">
+                    <a class="nav-link" th:href="@{/my-trainer-classes}">Moje Zajęcia</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item" th:if="${session.loggedInUserId != null}">
+                     <span class="navbar-text me-3" th:text="'Witaj, ' + ${session.loggedInUserFirstName} + '!'">
+                        Witaj, Użytkowniku!
+                    </span>
+                </li>
+                <li class="nav-item" th:if="${session.loggedInUserId != null}">
+                    <a class="nav-link" th:href="@{/logout}">Wyloguj</a>
+                </li>
+                <li class="nav-item" th:unless="${session.loggedInUserId != null}">
+                    <a class="nav-link" th:href="@{/login}">Zaloguj</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+</body>
+</html>
+
+================
+File: src/main/resources/templates/login.html
+================
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Logowanie - FitFlow</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .login-form {
+            width: 100%;
+            max-width: 400px;
+            padding: 15px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<main class="login-form">
+    <form th:action="@{/login}" method="post">
+        <h1 class="h3 mb-3 fw-normal text-center">FitFlow Logowanie</h1>
+        <p class="text-center">Proszę się zalogować, używając adresu e-mail.</p>
+
+        <div th:if="${error}" class="alert alert-danger" role="alert" th:text="${error}">
+            Błędne dane.
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email" name="email" placeholder="jan.kowalski@example.com" required>
+            <label for="email">Adres email</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password" value="password123" required>
+            <label for="password">Hasło</label>
+        </div>
+
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Zaloguj się</button>
+    </form>
+</main>
+</body>
+</html>
+
+================
+File: src/main/resources/templates/my-reservations.html
+================
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Moje Rezerwacje - FitFlow</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div th:replace="~{fragments :: navbar}"></div>
+
+<div class="container mt-4">
+    <h2>Moje Rezerwacje</h2>
+
+    <!-- Komunikat o sukcesie po usunięciu rezerwacji -->
+    <div th:if="${successMessage}" class="alert alert-success" role="alert" th:text="${successMessage}"></div>
+
+    <p>Witaj, <span th:text="${member.firstName}"></span>! Oto lista Twoich nadchodzących rezerwacji.</p>
+
+    <div th:if="${reservations.isEmpty()}" class="alert alert-info" role="alert">
+        Nie masz jeszcze żadnych rezerwacji. Sprawdź nasz <a th:href="@{/class-schedule}" class="alert-link">grafik zajęć</a>!
+    </div>
+
+    <table class="table table-striped" th:if="${!reservations.isEmpty()}">
+        <thead>
+        <tr>
+            <th scope="col">Nazwa Zajęć</th>
+            <th scope="col">Data i Godzina</th>
+            <th scope="col">Trener</th>
+            <th scope="col">Sala</th>
+            <th scope="col">Status</th>
+            <!-- Nowa kolumna na akcje -->
+            <th scope="col">Akcje</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="reservation : ${reservations}">
+            <td th:text="${reservation.fitnessClass.name}">Joga</td>
+            <td th:text="${#temporals.format(reservation.fitnessClass.dateTime, 'dd.MM.yyyy HH:mm')}">01.01.2025 10:00</td>
+            <td th:text="${reservation.fitnessClass.trainer.firstName} + ' ' + ${reservation.fitnessClass.trainer.lastName}">Anna Nowak</td>
+            <td th:text="${reservation.fitnessClass.trainingRoom.name}">Sala A</td>
+            <td><span class="badge bg-success" th:text="${reservation.status}">Potwierdzona</span></td>
+            <td>
+                <!-- Formularz do wysyłania żądania DELETE -->
+                <form th:action="@{/my-reservations/remove/{id}(id=${reservation.id})}" th:method="post">
+                    <!-- Ukryte pole informujące Springa, że to jest żądanie DELETE -->
+                    <input type="hidden" name="_method" value="delete" />
+                    <button type="submit" class="btn btn-danger btn-sm"
+                            onclick="return confirm('Czy na pewno chcesz anulować tę rezerwację?');">
+                        Anuluj
+                    </button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+================
+File: src/main/resources/templates/trainer-class-details.html
+================
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Szczegóły Zajęć - FitFlow</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div th:replace="~{fragments :: navbar}"></div>
+
+<div class="container mt-4">
+    <a th:href="@{/my-trainer-classes}" class="btn btn-outline-secondary mb-3">&larr; Powrót do listy zajęć</a>
+
+    <h2 th:text="${fitnessClass.name}">Nazwa Zajęć</h2>
+    <p class="lead" th:text="${fitnessClass.description}">Opis zajęć.</p>
+    <hr>
+
+    <h4>Lista Uczestników (<span th:text="${fitnessClass.reservations.size()}">0</span>)</h4>
+
+    <div th:if="${fitnessClass.reservations.isEmpty()}" class="alert alert-info mt-3">
+        Brak zapisanych uczestników na te zajęcia.
+    </div>
+
+    <ul class="list-group mt-3" th:if="${!fitnessClass.reservations.isEmpty()}">
+        <li class="list-group-item" th:each="reservation : ${fitnessClass.reservations}">
+            <span th:text="${reservation.member.firstName} + ' ' + ${reservation.member.lastName}"></span>
+            <small class="text-muted" th:text="' - ' + ${reservation.member.email}"></small>
+        </li>
+    </ul>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+================
+File: src/main/resources/templates/trainer-classes.html
+================
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Moje Zajęcia - FitFlow</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div th:replace="~{fragments :: navbar}"></div>
+
+<div class="container mt-4">
+    <h2>Moje Zajęcia</h2>
+    <p>Poniżej znajduje się lista wszystkich zajęć, które prowadzisz.</p>
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Nazwa Zajęć</th>
+            <th scope="col">Data i Godzina</th>
+            <!-- Nowa kolumna -->
+            <th scope="col">Sala</th>
+            <th scope="col">Zapisani / Limit</th>
+            <th scope="col">Szczegóły</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="class : ${classes}">
+            <td th:text="${class.name}">Nazwa</td>
+            <td th:text="${#temporals.format(class.dateTime, 'dd.MM.yyyy HH:mm')}">Data</td>
+            <!-- Nowa komórka z nazwą sali -->
+            <td th:text="${class.trainingRoom.name}">Nazwa Sali</td>
+            <td>
+                <div class="progress" style="height: 25px;">
+                    <div class="progress-bar" role="progressbar"
+                         th:style="'width:' + (${class.numberOfReservations} * 100 / ${class.capacity}) + '%;'"
+                         th:aria-valuenow="${class.numberOfReservations}"
+                         th:aria-valuemin="0"
+                         th:aria-valuemax="${class.capacity}"
+                         th:text="${class.numberOfReservations} + ' / ' + ${class.capacity}">
+                    </div>
+                </div>
+            </td>
+            <td>
+                <a th:href="@{/my-trainer-classes/{id}(id=${class.id})}" class="btn btn-primary btn-sm">Zobacz szczegóły</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+</file>
+
+<file path="fitflow/src/main/java/s24825/controller/LoginController.java">
+package s24825.controller;
+
+import jakarta.servlet.http.HttpSession;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import s24825.model.person.Person;
+import s24825.model.person.Trainer;
+import s24825.service.LoginService;
+import s24825.service.SessionService;
+
+@Controller
+public class LoginController {
+
+    private final LoginService loginService;
+    private final SessionService sessionService;
+
+    public LoginController(LoginService loginService, SessionService sessionService) {
+        this.loginService = loginService;
+        this.sessionService = sessionService;
+    }
+
+    @GetMapping("/login")
+    public String showLoginPage() {
+        return "login";
+    }
+
+    @PostMapping("/login")
+    public String processLogin(@RequestParam String email, @RequestParam String password, HttpSession session) {
+        Person person = loginService.login(email, password);
+        sessionService.loginUser(session, person);
+
+        if (person instanceof Trainer) {
+            return "redirect:/my-trainer-classes";
+        }
+
+        return "redirect:/class-schedule";
+    }
+
+    @GetMapping("/logout")
+    public String logout(HttpSession session) {
+        loginService.logout(session);
+        return "redirect:/login";
+    }
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/model/membership/Membership.java">
+package s24825.model.membership;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import s24825.model.membership.state.ExpiredState;
+import s24825.model.membership.state.MembershipState;
+import s24825.model.membership.state.PremiumState;
+import s24825.model.membership.state.StandardState;
+import s24825.model.person.Member;
+
+import java.time.LocalDate;
+
+@Entity
+@Table(name = "memberships")
+@Getter
+@Setter
+@NoArgsConstructor
+public class Membership {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private LocalDate purchaseDate;
+    private LocalDate expirationDate;
+    private String membershipType;
+    private int entriesUsed;
+
+    @Transient
+    private MembershipState currentState;
+
+    @ManyToOne
+    @JoinColumn(name = "member_id", nullable = false)
+    private Member member;
+
+
+
+    public boolean canBook() {
+        if (this.currentState == null) {
+            initializeState();
+        }
+        return this.currentState.canBook(this);
+    }
+
+    public void handleBooking() {
+        if (this.currentState == null) {
+            initializeState();
+        }
+        this.currentState.handleBooking(this);
+    }
+
+    public String getTypeName() {
+        if (this.currentState == null) {
+            initializeState();
+        }
+        return this.currentState.getTypeName();
+    }
+
+
+    @PostLoad
+    public void initializeState() {
+        if (!isActive()) {
+            this.currentState = new ExpiredState();
+            return;
+        }
+
+        if ("PREMIUM".equalsIgnoreCase(this.membershipType)) {
+            this.currentState = new PremiumState();
+        } else {
+            this.currentState = new StandardState();
+        }
+    }
+
+
+    public void upgradeToPremium() {
+        this.setMembershipType("PREMIUM");
+        this.setEntriesUsed(0);
+        this.initializeState();
+    }
+
+    public boolean isActive() {
+        return getExpirationDate() != null && !LocalDate.now().isAfter(getExpirationDate());
+    }
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/repository/MemberRepository.java">
+package s24825.repository;
+
+
+import jakarta.persistence.QueryHint;
+import org.springframework.data.jpa.repository.EntityGraph;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.jpa.repository.QueryHints;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+import s24825.model.person.Member;
+
+import java.util.Optional;
+
+@Repository
+public interface MemberRepository extends JpaRepository<Member, Long> {
+
+    Optional<Member> findById(Long id);
+
+    @QueryHints({ @QueryHint(name = "org.hibernate.comment", value = "[MemberRepo] Find Member with all details for MyReservations page") })
+    @Query("SELECT DISTINCT m FROM Member m " +
+            "LEFT JOIN FETCH m.memberships " +
+            "LEFT JOIN FETCH m.reservations r " +
+            "LEFT JOIN FETCH r.fitnessClass fc " +
+            "LEFT JOIN FETCH fc.trainer " +
+            "LEFT JOIN FETCH fc.trainingRoom " +
+            "WHERE m.id = :id")
+    Optional<Member> findByIdWithDetails(@Param("id") Long id);
+
+    @QueryHints({ @QueryHint(name = "org.hibernate.comment", value = "[MemberRepo] Find Member with Memberships for Reservation check") })
+    @Query("SELECT DISTINCT m FROM Member m LEFT JOIN FETCH m.memberships WHERE m.id = :id")
+    Optional<Member> findByIdWithMemberships(@Param("id") Long id);
+
+    @QueryHints({ @QueryHint(name = "org.hibernate.comment", value = "[MemberRepo] Find Member by Email for Login") })
+    Optional<Member> findByEmail(String email);
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/repository/ReservationRepository.java">
+package s24825.repository;
+
+import jakarta.persistence.QueryHint;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.QueryHints;
+import org.springframework.stereotype.Repository;
+import s24825.model.reservation.Reservation;
+
+import java.util.Optional;
+
+@Repository
+public interface ReservationRepository extends JpaRepository<Reservation, Long> {
+
+    @QueryHints({ @QueryHint(name = "org.hibernate.comment", value = "[ReservationRepo] Check if a reservation exists for member and class") })
+    boolean existsByMemberIdAndFitnessClassId(Long fitnessClassId, Long memberId);
+
+
+
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/service/LoginService.java">
+package s24825.service;
+
+import jakarta.servlet.http.HttpSession;
+import org.springframework.stereotype.Service;
+import s24825.exception.InvalidCredentialsException;
+import s24825.model.person.Person;
+import s24825.service.auth.UserFinder;
+import java.util.List;
+import java.util.Optional;
+
+
+@Service
+public class LoginService {
+
+
+    private final List<UserFinder> finders;
+
+    public LoginService(List<UserFinder> finders) {
+        this.finders = finders;
+    }
+
+
+    public Person login(String email, String password) {
+
+        return finders.stream()
+                .map(finder -> finder.findByEmail(email)) // Spróbuj znaleźć użytkownika używając każdego "findera"
+                .filter(Optional::isPresent)             // Odsiej puste wyniki
+                .map(Optional::get)                      // Wyciągnij użytkownika z Optional
+                .findFirst()                             // Weź pierwszego znalezionego
+                .filter(person -> person.getPassword().equals(password)) // Sprawdź jego hasło
+                .orElseThrow(() -> new InvalidCredentialsException("Nieprawidłowy e-mail lub hasło.")); // Jeśli go nie ma lub hasło jest złe, rzuć wyjątek
+    }
+
+    public void logout(HttpSession session) {
+        session.invalidate();
+    }
+}
+</file>
+
+<file path="fitflow/src/main/resources/templates/class-schedule.html">
+<!DOCTYPE html>
+    <html lang="pl" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Grafik Zajęć - FitFlow</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+
+    <div th:replace="~{fragments :: navbar}"></div>
+
+    <div class="container mt-4">
+        <h2>Grafik Zajęć</h2>
+        <p>Przeglądaj dostępne zajęcia i zarezerwuj swoje miejsce.</p>
+
+        <!-- Success Message -->
+        <div th:if="${successMessage}" class="alert alert-success" role="alert" th:text="${successMessage}"></div>
+
+        <!-- Error Message -->
+        <div th:if="${errorMessage}" class="alert alert-danger" role="alert" th:text="${errorMessage}"></div>
+
+
+        <div class="list-group">
+            <div th:each="class : ${classes}" class="list-group-item list-group-item-action flex-column align-items-start mb-3 border rounded">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1" th:text="${class.name}">Nazwa zajęć</h5>
+                    <small th:text="${#temporals.format(class.dateTime, 'dd.MM.yyyy HH:mm')}">Data</small>
+                </div>
+                <p class="mb-1" th:text="${class.description}">Opis zajęć.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <small th:text="'Trener: ' + ${class.trainer.firstName} + ' ' + ${class.trainer.lastName}">Imię trenera</small><br>
+                        <small th:text="'Sala: ' + ${class.trainingRoom.name}">Sala</small>
+                    </div>
+                    <div>
+                        <span th:text="'Wolne miejsca: ' + (${class.capacity} - ${class.numberOfReservations})" class="badge bg-primary rounded-pill me-3"></span>
+                        <form th:action="@{/reservations}" method="post" class="d-inline">
+                            <input type="hidden" name="classId" th:value="${class.id}" />
+                            <input type="hidden" name="memberId" th:value="${memberId}" />
+                            <button type="submit" class="btn btn-success" th:disabled="${(class.capacity - class.numberOfReservations) <= 0}">
+                                Zarezerwuj
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>
+</file>
+
+<file path="fitflow/src/main/resources/templates/fragments.html">
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" th:fragment="navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" th:href="@{/class-schedule}">FitFlow</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/class-schedule}">Główny Grafik</a>
+                </li>
+                <li class="nav-item" th:if="${session.loggedInUserRole == 'MEMBER'}">
+                    <a class="nav-link" th:href="@{/my-reservations}">Moje Rezerwacje</a>
+                </li>
+                <li class="nav-item" th:if="${session.loggedInUserRole == 'TRAINER'}">
+                    <a class="nav-link" th:href="@{/my-trainer-classes}">Moje Zajęcia</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav align-items-center">
+
+                <li class="nav-item" th:if="${session.loggedInUserRole == 'MEMBER' && membershipTypeName != null}">
+                    <span class="navbar-text me-3" th:if="${membershipTypeName == 'Standard'}"
+                          title="Liczba wykorzystanych wejść w tym miesiącu">
+                        Wykorzystane wejścia: <b th:text="${membershipEntriesUsed}">0</b> / 20
+                    </span>
+                    <span class="navbar-text me-3" th:if="${membershipTypeName == 'Premium'}">
+                        Karnet: <b>Premium</b> (nielimitowane wejścia)
+                    </span>
+                </li>
+
+                <li class="nav-item me-3" th:if="${session.loggedInUserRole == 'MEMBER' && membershipTypeName == 'Standard'}">
+                    <form th:action="@{/my-memberships/upgrade-to-premium}" method="post" class="d-flex">
+                        <button type="submit" class="btn btn-warning btn-sm"
+                                onclick="return confirm('Czy na pewno chcesz ulepszyć swój karnet do wersji Premium?');">
+                            Przejdź na Premium
+                        </button>
+                    </form>
+                </li>
+
+
+                <li class="nav-item" th:if="${session.loggedInUserId != null}">
+                    <span class="navbar-text me-3">
+                        Witaj, <b th:text="${session.loggedInUserFirstName}"></b>!
+                    </span>
+                </li>
+                <li class="nav-item" th:if="${session.loggedInUserId != null}">
+                    <a class="nav-link" th:href="@{/logout}">Wyloguj</a>
+                </li>
+                <li class="nav-item" th:unless="${session.loggedInUserId != null}">
+                    <a class="nav-link" th:href="@{/login}">Zaloguj</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+</body>
+</html>
+</file>
+
+<file path="fitflow/src/main/resources/templates/my-reservations.html">
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Moje Rezerwacje - FitFlow</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div th:replace="~{fragments :: navbar}"></div>
+
+<div class="container mt-4">
+    <h2>Moje Rezerwacje</h2>
+
+    <!-- Komunikat o sukcesie po usunięciu rezerwacji -->
+    <div th:if="${successMessage}" class="alert alert-success" role="alert" th:text="${successMessage}"></div>
+
+    <p>Witaj, <span th:text="${member.firstName}"></span>! Oto lista Twoich nadchodzących rezerwacji.</p>
+
+    <div th:if="${reservations.isEmpty()}" class="alert alert-info" role="alert">
+        Nie masz jeszcze żadnych rezerwacji. Sprawdź nasz <a th:href="@{/class-schedule}" class="alert-link">grafik zajęć</a>!
+    </div>
+
+    <table class="table table-striped" th:if="${!reservations.isEmpty()}">
+        <thead>
+        <tr>
+            <th scope="col">Nazwa Zajęć</th>
+            <th scope="col">Data i Godzina</th>
+            <th scope="col">Trener</th>
+            <th scope="col">Sala</th>
+            <th scope="col">Status</th>
+            <!-- Nowa kolumna na akcje -->
+            <th scope="col">Akcje</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="reservation : ${reservations}">
+            <td th:text="${reservation.fitnessClass.name}">Joga</td>
+            <td th:text="${#temporals.format(reservation.fitnessClass.dateTime, 'dd.MM.yyyy HH:mm')}">01.01.2025 10:00</td>
+            <td th:text="${reservation.fitnessClass.trainer.firstName} + ' ' + ${reservation.fitnessClass.trainer.lastName}">Anna Nowak</td>
+            <td th:text="${reservation.fitnessClass.trainingRoom.name}">Sala A</td>
+            <td><span class="badge bg-success" th:text="${reservation.status}">Potwierdzona</span></td>
+            <td>
+                <!-- Formularz do wysyłania żądania DELETE -->
+                <form th:action="@{/my-reservations/remove/{id}(id=${reservation.id})}" th:method="post">
+                    <!-- Ukryte pole informujące Springa, że to jest żądanie DELETE -->
+                    <input type="hidden" name="_method" value="delete" />
+                    <button type="submit" class="btn btn-danger btn-sm"
+                            onclick="return confirm('Czy na pewno chcesz anulować tę rezerwację?');">
+                        Anuluj
+                    </button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+</file>
+
+<file path="fitflow/src/main/java/s24825/controller/ClassScheduleController.java">
+package s24825.controller;
+
+import jakarta.servlet.http.HttpSession;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import s24825.service.FitnessClassService;
+import s24825.service.ReservationService;
+import s24825.service.SessionService;
+
+@Controller
+public class ClassScheduleController {
+
+    private final FitnessClassService fitnessClassService;
+    private final ReservationService reservationService;
+    private final SessionService sessionService;
+
+    public ClassScheduleController(FitnessClassService fitnessClassService, ReservationService reservationService, SessionService sessionService) {
+        this.fitnessClassService = fitnessClassService;
+        this.reservationService = reservationService;
+        this.sessionService = sessionService;
+    }
+
+    @GetMapping({"/", "/class-schedule"})
+    public String showClassSchedule(Model model) {
+        // Ta strona jest publiczna, więc nie sprawdzamy sesji
+        model.addAttribute("classes", fitnessClassService.getAllClassesWithDetails());
+        return "class-schedule";
+    }
+
+    @PostMapping("/reservations")
+    public String makeReservation(@RequestParam("classId") Long classId, HttpSession session, RedirectAttributes redirectAttributes) {
+        // Zabezpieczenie: tylko zalogowany użytkownik może dokonać rezerwacji
+        Long memberId = sessionService.getLoggedInUserId(session);
+        reservationService.createReservation(memberId, classId);
+        redirectAttributes.addFlashAttribute("successMessage", "Rezerwacja zakończona pomyślnie!");
+        return "redirect:/class-schedule";
+    }
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/model/person/Person.java">
+package s24825.model.person;
+
+import jakarta.persistence.Embedded;
+import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.Transient;
+import jakarta.validation.constraints.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import s24825.model.other.Address;
+
+import java.time.LocalDate;
+
+@MappedSuperclass
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+
+public abstract class Person {
+
+    @NotBlank(message = "First name is required")
+    @Size(min = 2, max = 255, message = "First name must be between 2 and 255 characters")
+    private String firstName;
+
+    @NotBlank(message = "Last name is required")
+    @Size(min = 2, max = 255, message = "Last name must be between 2 and 255 characters")
+    private String lastName;
+
+    @NotNull(message = "Date of birth is required")
+    private LocalDate dateOfBirth;
+
+    @NotBlank(message = "Phone number is required")
+    @Size(min = 9, max = 15, message = "Phone number must be between 9 and 15 characters")
+    @Pattern(regexp = "^\\+?[0-9]{9,15}$", message = "Phone number is not valid")
+    private String phone;
+
+    @NotBlank(message = "Email is required")
+    @Size(min = 5, max = 255, message = "Email must be between 5 and 255 characters")
+    @Email(message = "Email is not valid")
+    private String email;
+
+    @NotBlank(message = "Password is required")
+    @Size(min = 8, max = 255, message = "Password must be between 8 and 255 characters")
+    private String password;
+
+    @Embedded
+    private Address address;
+
+    @Transient
+    public int getAge() {
+        return LocalDate.now().getYear() - dateOfBirth.getYear();
+    }
+
+    public abstract Long getId();
+
+
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/repository/FitnessClassRepository.java">
+package s24825.repository;
+
+import jakarta.persistence.QueryHint;
+import org.springframework.data.jpa.repository.EntityGraph;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.jpa.repository.QueryHints;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+import s24825.model.classes.FitnessClass;
+
+import java.util.List;
+import java.util.Optional;
+
+@Repository
+public interface FitnessClassRepository extends JpaRepository<FitnessClass, Long> {
+
+    @Query("SELECT fc FROM FitnessClass fc")
+    @EntityGraph(value = "FitnessClass.withDetails")
+    @QueryHints({ @QueryHint(name = "org.hibernate.comment", value = "[FitnessClassRepo] Find all classes with details (graph)") })
+    List<FitnessClass> findAllWithDetails();
+
+    // Nowa metoda do pobierania zajęć dla konkretnego trenera
+    @Query("SELECT fc FROM FitnessClass fc WHERE fc.trainer.id = :trainerId ORDER BY fc.dateTime")
+    @EntityGraph(value = "FitnessClass.withDetails")
+    @QueryHints({ @QueryHint(name = "org.hibernate.comment", value = "[FitnessClassRepo] Find all classes for a specific trainer") })
+    List<FitnessClass> findByTrainerIdWithDetails(@Param("trainerId") Long trainerId);
+
+    // Nowa metoda do pobierania szczegółów jednych zajęć dla trenera (zabezpieczenie)
+    @Query("SELECT fc FROM FitnessClass fc WHERE fc.id = :classId AND fc.trainer.id = :trainerId")
+    @EntityGraph(attributePaths = {"reservations.member"}) // Dociągamy rezerwacje i ich członków
+    @QueryHints({ @QueryHint(name = "org.hibernate.comment", value = "[FitnessClassRepo] Find specific class details for a trainer") })
+    Optional<FitnessClass> findByIdAndTrainerIdWithParticipants(@Param("classId") Long classId, @Param("trainerId") Long trainerId);
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/service/DataInitializerService.java">
+package s24825.service;
+
+import jakarta.annotation.PostConstruct;
+import org.springframework.stereotype.Service;
+import s24825.model.classes.GroupClass;
+import s24825.model.membership.Membership;
+import s24825.model.other.Address;
+import s24825.model.other.TrainingRoom;
+import s24825.model.person.Member;
+import s24825.model.person.Trainer;
+import s24825.model.reservation.Reservation;
+import s24825.repository.*;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Arrays;
+
+/**
+ * Service to initialize the database with sample data for demonstration purposes.
+ */
+@Service
+public class DataInitializerService {
+
+    private final MemberRepository memberRepository;
+    private final TrainerRepository trainerRepository;
+    private final TrainingRoomRepository trainingRoomRepository;
+    private final FitnessClassRepository fitnessClassRepository;
+    private final ReservationRepository reservationRepository; // <-- DODANE REPOZYTORIUM
+
+    public DataInitializerService(MemberRepository memberRepository, TrainerRepository trainerRepository,
+                                  TrainingRoomRepository trainingRoomRepository, FitnessClassRepository fitnessClassRepository,
+                                  ReservationRepository reservationRepository) { // <-- DODANY PARAMETR
+        this.memberRepository = memberRepository;
+        this.trainerRepository = trainerRepository;
+        this.trainingRoomRepository = trainingRoomRepository;
+        this.fitnessClassRepository = fitnessClassRepository;
+        this.reservationRepository = reservationRepository; // <-- DODANE PRZYPISANIE
+    }
+
+    @PostConstruct
+    @org.springframework.transaction.annotation.Transactional
+    public void initData() {
+
+        // 1. CREATE TRAINING ROOMS
+        TrainingRoom roomA = new TrainingRoom();
+        roomA.setName("Sala A (Siłownia)");
+        roomA.setNumber("A1");
+        roomA.setCapacity(20);
+        trainingRoomRepository.save(roomA);
+
+        TrainingRoom roomB = new TrainingRoom();
+        roomB.setName("Sala B (Fitness)");
+        roomB.setNumber("B2");
+        roomB.setCapacity(25);
+        trainingRoomRepository.save(roomB);
+
+        TrainingRoom roomC = new TrainingRoom();
+        roomC.setName("Sala C (Cardio)");
+        roomC.setNumber("C3");
+        roomC.setCapacity(30);
+        trainingRoomRepository.save(roomC);
+
+        // 2. CREATE TRAINERS
+        Trainer trainer1 = new Trainer();
+        trainer1.setFirstName("Anna");
+        trainer1.setLastName("Nowak");
+        trainer1.setEmail("anna.nowak@fitflow.com");
+        trainer1.setPassword("password123");
+        trainer1.setDateOfBirth(LocalDate.of(1990, 5, 15));
+        trainer1.setPhone("123456789");
+        trainer1.setLicenseNumber("T-123456");
+        Address address1 = new Address();
+        address1.setStreet("Słoneczna");
+        address1.setHouseNumber("10");
+        address1.setCity("Warszawa");
+        address1.setPostalCode("01-234");
+        trainer1.setAddress(address1);
+        trainer1.setSpecializations(Arrays.asList("Joga", "Pilates", "Zdrowy kręgosłup"));
+        trainerRepository.save(trainer1);
+
+        Trainer trainer2 = new Trainer();
+        trainer2.setFirstName("Piotr");
+        trainer2.setLastName("Wiśniewski");
+        trainer2.setEmail("piotr.wisniewski@fitflow.com");
+        trainer2.setPassword("password123");
+        trainer2.setDateOfBirth(LocalDate.of(1985, 10, 20));
+        trainer2.setPhone("987654321");
+        trainer2.setLicenseNumber("T-654321");
+        Address address2 = new Address();
+        address2.setStreet("Księżycowa");
+        address2.setHouseNumber("5A");
+        address2.setApartmentNumber("12");
+        address2.setCity("Kraków");
+        address2.setPostalCode("30-002");
+        trainer2.setAddress(address2);
+        trainer2.setSpecializations(Arrays.asList("Crossfit", "Trening siłowy"));
+        trainerRepository.save(trainer2);
+
+        // 3. CREATE MEMBERS AND MEMBERSHIPS
+
+        // Member 1: Standard Active Pass
+        Member member1 = new Member();
+        member1.setFirstName("Jan");
+        member1.setLastName("Kowalski");
+        member1.setMemberNumber("M001");
+        member1.setEmail("jan.kowalski@example.com");
+        member1.setPassword("password123");
+        member1.setDateOfBirth(LocalDate.of(1995, 3, 25));
+        member1.setPhone("555666777");
+        member1.setRegistrationDate(LocalDate.now().minusMonths(6));
+        Address memberAddress1 = new Address();
+        memberAddress1.setStreet("Główna");
+        memberAddress1.setHouseNumber("1");
+        memberAddress1.setCity("Warszawa");
+        memberAddress1.setPostalCode("02-456");
+        member1.setAddress(memberAddress1);
+
+        Membership pass1 = new Membership();
+        pass1.setMembershipType("STANDARD");
+        pass1.setPurchaseDate(LocalDate.now());
+        pass1.setExpirationDate(LocalDate.now().plusMonths(1));
+        pass1.setEntriesUsed(0);
+        member1.addPass(pass1);
+        memberRepository.save(member1);
+
+        // Member 2: Premium Active Pass
+        Member member2 = new Member();
+        member2.setFirstName("Anna");
+        member2.setLastName("Zielińska");
+        member2.setMemberNumber("M002");
+        member2.setEmail("anna.zielinska@example.com");
+        member2.setPassword("password123");
+        member2.setDateOfBirth(LocalDate.of(1998, 8, 20));
+        member2.setPhone("222333444");
+        Address memberAddress2 = new Address();
+        memberAddress2.setStreet("Polna");
+        memberAddress2.setHouseNumber("2");
+        memberAddress2.setCity("Gdańsk");
+        memberAddress2.setPostalCode("80-123");
+        member2.setAddress(memberAddress2);
+
+        Membership pass2 = new Membership();
+        pass2.setMembershipType("PREMIUM");
+        pass2.setPurchaseDate(LocalDate.now().minusDays(10));
+        pass2.setExpirationDate(LocalDate.now().plusMonths(2));
+        member2.addPass(pass2);
+        memberRepository.save(member2);
+
+        // Member 3: Standard Expired Pass
+        Member member3 = new Member();
+        member3.setFirstName("Tomasz");
+        member3.setLastName("Wójcik");
+        member3.setMemberNumber("M003");
+        member3.setEmail("tomasz.wojcik@example.com");
+        member3.setPassword("password123");
+        member3.setDateOfBirth(LocalDate.of(1991, 1, 1));
+        member3.setPhone("333444555");
+        Address memberAddress3 = new Address();
+        memberAddress3.setStreet("Krótka");
+        memberAddress3.setHouseNumber("3");
+        memberAddress3.setCity("Poznań");
+        memberAddress3.setPostalCode("60-456");
+        member3.setAddress(memberAddress3);
+
+        Membership pass3 = new Membership();
+        pass3.setMembershipType("STANDARD");
+        pass3.setPurchaseDate(LocalDate.now().minusMonths(2));
+        pass3.setExpirationDate(LocalDate.now().minusMonths(1)); // Expired last month
+        pass3.setEntriesUsed(5);
+        member3.addPass(pass3);
+        memberRepository.save(member3);
+
+        // 4. CREATE FITNESS CLASSES
+        GroupClass yogaClass = new GroupClass();
+        yogaClass.setName("Poranna Joga");
+        yogaClass.setDescription("Odświeżająca sesja jogi na dobry początek dnia.");
+        yogaClass.setDateTime(LocalDateTime.now().plusDays(2).withHour(8).withMinute(0));
+        yogaClass.setDurationInMinutes(60);
+        yogaClass.setTrainer(trainer1);
+        yogaClass.setTrainingRoom(roomB);
+        yogaClass.setParticipantLimit(15);
+        fitnessClassRepository.save(yogaClass);
+
+        GroupClass crossfitClass = new GroupClass();
+        crossfitClass.setName("Crossfit");
+        crossfitClass.setDescription("Intensywny trening funkcjonalny.");
+        crossfitClass.setDateTime(LocalDateTime.now().plusDays(2).withHour(18).withMinute(0));
+        crossfitClass.setDurationInMinutes(50);
+        crossfitClass.setTrainer(trainer2);
+        crossfitClass.setTrainingRoom(roomA);
+        crossfitClass.setParticipantLimit(10);
+        fitnessClassRepository.save(crossfitClass);
+
+        GroupClass pilatesClass = new GroupClass();
+        pilatesClass.setName("Pilates dla każdego");
+        pilatesClass.setDescription("Wzmacniający pilates dla każdego.");
+        pilatesClass.setDateTime(LocalDateTime.now().plusDays(3).withHour(17).withMinute(0));
+        pilatesClass.setDurationInMinutes(55);
+        pilatesClass.setTrainer(trainer1);
+        pilatesClass.setTrainingRoom(roomB);
+        pilatesClass.setParticipantLimit(2); // Low limit to test full class scenario
+        fitnessClassRepository.save(pilatesClass);
+
+        GroupClass hiitClass = new GroupClass();
+        hiitClass.setName("HIIT");
+        hiitClass.setDescription("Trening interwałowy o wysokiej intensywności.");
+        hiitClass.setDateTime(LocalDateTime.now().plusDays(4).withHour(19).withMinute(0));
+        hiitClass.setDurationInMinutes(45);
+        hiitClass.setTrainer(trainer2);
+        hiitClass.setTrainingRoom(roomC);
+        hiitClass.setParticipantLimit(20);
+        fitnessClassRepository.save(hiitClass);
+
+
+        // 5. CREATE RESERVATIONS TO POPULATE THE SYSTEM
+
+        // Member 1 reserves Yoga. His pass usage should increment.
+        Reservation res1 = new Reservation(member1, yogaClass);
+        reservationRepository.save(res1);
+        pass1.handleBooking(); // Update entriesUsed for the standard pass
+        memberRepository.save(member1); // Save the updated state of the member/pass
+
+        // Member 2 reserves Crossfit.
+        Reservation res2 = new Reservation(member2, crossfitClass);
+        reservationRepository.save(res2);
+        pass2.handleBooking(); // For premium pass, this does nothing, which is correct
+        memberRepository.save(member2);
+
+        // Member 1 and 2 reserve the Pilates class to make it full
+        Reservation res3 = new Reservation(member1, pilatesClass);
+        reservationRepository.save(res3);
+        pass1.handleBooking();
+        memberRepository.save(member1);
+
+        Reservation res4 = new Reservation(member2, pilatesClass);
+        reservationRepository.save(res4);
+        pass2.handleBooking();
+        memberRepository.save(member2);
+
+        // We do not create a reservation for member3, as his pass is expired.
+        // This allows testing the scenario where a user cannot book a class.
+    }
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/controller/MyReservationsController.java">
+package s24825.controller;
+
+import jakarta.servlet.http.HttpSession;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import s24825.model.person.Member;
+import s24825.model.reservation.Reservation;
+import s24825.service.MemberService;
+import s24825.service.ReservationService;
+import s24825.service.SessionService;
+
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+
+@Controller
+public class MyReservationsController {
+
+    private final MemberService memberService;
+    private final SessionService sessionService;
+    private final ReservationService reservationService;
+
+    public MyReservationsController(MemberService memberService, SessionService sessionService, ReservationService reservationService) {
+        this.memberService = memberService;
+        this.sessionService = sessionService;
+        this.reservationService = reservationService;
+    }
+
+    @GetMapping("/my-reservations")
+    public String showMyReservations(Model model, HttpSession session) {
+        // Zabezpieczenie: Sprawdzamy, czy użytkownik jest zalogowany
+        Long memberId = sessionService.getLoggedInUserId(session);
+        Member member = memberService.getMemberWithDetails(memberId);
+
+        List<Reservation> sortedReservations = member.getReservations().stream()
+                .sorted(Comparator.comparing(r -> r.getFitnessClass().getDateTime()))
+                .collect(Collectors.toList());
+
+        model.addAttribute("member", member);
+        model.addAttribute("reservations", sortedReservations);
+        return "my-reservations";
+    }
+
+    @DeleteMapping("/my-reservations/remove/{id}")
+    public String removeReservation(@PathVariable Long id,
+                                    HttpSession session,
+                                    RedirectAttributes redirectAttributes) {
+
+        // Zabezpieczenie: Sprawdzamy, czy użytkownik jest zalogowany
+        Long memberId = sessionService.getLoggedInUserId(session);
+        reservationService.removeReservation(id);
+        redirectAttributes.addFlashAttribute("successMessage", "Rezerwacja została pomyślnie usunięta!");
+        return "redirect:/my-reservations";
+    }
+}
+</file>
+
+<file path="fitflow/src/main/java/s24825/service/ReservationService.java">
+package s24825.service;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import s24825.exception.ReservationException;
+import s24825.exception.ResourceNotFoundException;
+import s24825.model.classes.FitnessClass;
+import s24825.model.membership.Membership;
+import s24825.model.person.Member;
+import s24825.model.reservation.Reservation;
+import s24825.repository.FitnessClassRepository;
+import s24825.repository.MemberRepository;
+import s24825.repository.ReservationRepository;
+
+import java.util.Optional;
+
+@Service
+public class ReservationService {
+
+    private final MemberRepository memberRepository;
+    private final FitnessClassRepository fitnessClassRepository;
+    private final ReservationRepository reservationRepository;
+
+    public ReservationService(MemberRepository memberRepository,
+                              FitnessClassRepository fitnessClassRepository,
+                              ReservationRepository reservationRepository) {
+        this.memberRepository = memberRepository;
+        this.fitnessClassRepository = fitnessClassRepository;
+        this.reservationRepository = reservationRepository;
+    }
+
+    @Transactional
+    public void createReservation(Long memberId, Long fitnessClassId) {
+
+        if (reservationRepository.existsByMemberIdAndFitnessClassId(memberId, fitnessClassId)) {
+            throw new ReservationException("Już posiadasz rezerwację na te zajęcia.");
+        }
+
+        Member member = memberRepository.findByIdWithMemberships(memberId)
+                .orElseThrow(() -> new ResourceNotFoundException("Nie znaleziono członka o ID: " + memberId));
+
+        Optional<Membership> activePass = member.getMemberships().stream()
+                .filter(Membership::isActive)
+                .findFirst();
+
+        if (activePass.isEmpty() || !activePass.get().canBook()) {
+            throw new ReservationException("Członek nie posiada aktywnego karnetu lub wyczerpał limit wejść.");
+        }
+
+        FitnessClass fitnessClass = fitnessClassRepository.findById(fitnessClassId)
+                .orElseThrow(() -> new ResourceNotFoundException("Nie znaleziono zajęć o ID: " + fitnessClassId));
+
+        activePass.get().handleBooking();
+
+        Reservation reservation = new Reservation(member, fitnessClass);
+        reservationRepository.save(reservation);
+    }
+
+    @Transactional
+    public void removeReservation(Long reservationId) {
+        Reservation reservation = reservationRepository.findById(reservationId)
+                .orElseThrow(() -> new ResourceNotFoundException("Nie znaleziono rezerwacji o ID: " + reservationId));
+
+        reservationRepository.delete(reservation);
+
+    }
+}
+</file>
+
+<file path="fitflow/src/main/resources/application.properties">
+# ===============================
+# H2 DATABASE CONFIGURATION
+# ===============================
+# Enable H2 web console
+spring.h2.console.enabled=true
+# Set the path for the H2 console
+spring.h2.console.path=/h2-console
+
+server.port=8082
+
+# ===============================
+# DATASOURCE CONFIGURATION
+# ===============================
+# The URL of the database. H2 in-memory database named 'fitflowdb'.
+spring.datasource.url=jdbc:h2:mem:fitflowdb
+# The username for the database.
+spring.datasource.username=sa
+# The password for the database.
+spring.datasource.password=
+# The driver class name for the H2 database.
+spring.datasource.driverClassName=org.h2.Driver
+
+
+spring.mvc.hiddenmethod.filter.enabled=true
+
+# ===============================
+# JPA (JAVA PERSISTENCE API) CONFIGURATION
+# ===============================
+# Show SQL statements in the console for debugging purposes.
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.use_sql_comments=true
+spring.jpa.properties.hibernate.format_sql=true
+
+# Let Hibernate generate the database schema on startup. 'create-drop' is great for development.
+spring.jpa.hibernate.ddl-auto=create-drop
+# Specifies the H2 dialect for Hibernate.
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+</file>
+
+</files>
